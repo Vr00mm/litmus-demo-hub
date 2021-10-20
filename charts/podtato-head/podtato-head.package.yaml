@@ -1,0 +1,8 @@
+packageName: podtato-head
+experiments:
+  - name: container-kill-left-leg
+    CSV: container-kill-left-leg.chartserviceversion.yaml
+    desc: "container-kill-left-leg"
+  - name: memory-hog-left-leg
+    CSV: memory-hog-left-leg.chartserviceversion.yaml
+    desc: "memory-hog-left-leg"

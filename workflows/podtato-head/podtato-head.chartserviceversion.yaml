@@ -1,40 +1,36 @@
 apiVersion: litmuchaos.io/v1alpha1
 kind: ChartServiceVersion
 metadata:
-  createdAt: 2021-05-24T10:28:08Z
   name: podtato-head
   version: 0.1.0
   annotations:
     categories: podtato-head
     chartDescription: Injects chaos on podtato-head application
 spec:
-  displayName: Podtato-head Chaos
-  categoryDescription: >
-    It install podtato-head application, inject chaos on podtato-head, uninstall the application 
-    and revert the chaos
+  displayName: podtato-head
   experiments:
-    - pod-delete
+    - podtato-head-container-kill-left-leg
+    - podtato-head-memory-hog-left-leg
   keywords:
     - Kubernetes
-    - Podtato-head
+    - datamap-preprod
     - Pod
+    - Memory
+    - CPU
+    - Network
+    - Disk
   platforms:
-    - GKE
-    - Minikube 
-    - Packet(Kubeadm)
-    - EKS
-    - AKS
+    - preprod02
   maintainers:
-    - name: oumkale
-      email: oumkale@chaosnative.com
+    - name: ChaosTeam
+      email: _chaos@company.com
   provider:
-    name: ChaosNative
+    name: CompanyName
   links:
-    - name: Kubernetes Slack
-      url: https://slack.kubernetes.io/
+    - name: Mattermost Chaos
+      url: https://mattermost.pe-qvr.net/tmj/channels/chaos-engineering
     - name: Documentation
-      url: https://docs.litmuschaos.io/docs/chaoshub/#generic-chaos
+      url: https://github.com/litmuschaos/chaos-charts
   icon:
     - url:
       mediatype: ""
-      

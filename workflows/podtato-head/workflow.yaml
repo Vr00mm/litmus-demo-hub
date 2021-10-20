@@ -1,114 +1,268 @@
+
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  generateName: argowf-podtato-head-chaos-
-  namespace: litmus
-  labels:
-    subject : "{{workflow.parameters.adminModeNamespace}}_podtato-main"
+  name: podtato-head
+  namespace: default
 spec:
-  entrypoint: argowf-chaos
-  serviceAccountName: argo-chaos
-  securityContext:
-    runAsUser: 1000
-    runAsNonRoot: true
   arguments:
     parameters:
       - name: adminModeNamespace
-        value: "litmus"
+        value: oi137-litmus
+  entrypoint: custom-chaos
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 1000
+  serviceAccountName: argo-chaos
   templates:
-    - name: argowf-chaos
+    - name: custom-chaos
       steps:
-        - - name: install-application
-            template: install-application
         - - name: install-chaos-experiments
             template: install-chaos-experiments
-        - - name: pod-delete
-            template: pod-delete
-        - - name: revert-chaos
-            template: revert-chaos
-          - name: delete-application
-            template: delete-application
-
-    - name: install-application
-      container:
-        image: litmuschaos/litmus-app-deployer:latest
-        args: ["-namespace={{workflow.parameters.adminModeNamespace}}","-typeName=resilient","-operation=apply","-timeout=400", "-app=podtato-head","-scope=namespace"]
-
+        - - name: container-kill-left-leg
+            template: container-kill-left-leg
+        - - name: memory-hog-left-leg
+            template: memory-hog-left-leg
     - name: install-chaos-experiments
-      container:
-        image: litmuschaos/k8s:latest
-        command: [sh, -c]
-        args:
-          - "kubectl apply -f https://hub.litmuschaos.io/api/chaos/master?file=charts/generic/experiments.yaml -n
-            {{workflow.parameters.adminModeNamespace}} ; sleep 30"
-
-    - name: pod-delete
       inputs:
         artifacts:
-          - name: pod-delete
-            path: /tmp/chaosengine.yaml
+          - name: container-kill-left-leg
+            path: /tmp/container-kill-left-leg.yaml
             raw:
               data: |
                 apiVersion: litmuschaos.io/v1alpha1
+                description:
+                  message: |
+                    Kills a container belonging to an application pod 
+                kind: ChaosExperiment
+                metadata:
+                  name: container-kill-left-leg
+                  labels:
+                    name: container-kill-left-leg
+                    app.kubernetes.io/part-of: litmus
+                    app.kubernetes.io/component: chaosexperiment
+                    app.kubernetes.io/version: latest
+                spec:
+                  definition:
+                    scope: Namespaced
+                    permissions:
+                      - apiGroups:
+                          - ""
+                          - apps
+                          - batch
+                          - apps.openshift.io
+                          - argoproj.io
+                          - litmuschaos.io
+                        resources:
+                          - jobs
+                          - pods
+                          - pods/log
+                          - events
+                          - replicationcontrollers
+                          - deployments
+                          - statefulsets
+                          - daemonsets
+                          - replicasets
+                          - deploymentconfigs
+                          - rollouts
+                          - pods/exec
+                          - chaosengines
+                          - chaosexperiments
+                          - chaosresults
+                        verbs:
+                          - create
+                          - list
+                          - get
+                          - update
+                          - patch
+                          - delete
+                          - deletecollection
+                    image: litmuschaos/go-runner:latest
+                    imagePullPolicy: Always
+                    args:
+                      - -c
+                      - ./experiments -name container-kill
+                    command:
+                      - /bin/bash
+                    env:
+                      - name: TARGET_CONTAINER
+                        value: ""
+                      - name: RAMP_TIME
+                        value: ""
+                      - name: LIB
+                        value: "pumba"
+                      - name: TARGET_PODS
+                        value: ""
+                      - name: CHAOS_INTERVAL
+                        value: "10"
+                      - name: SIGNAL
+                        value: "SIGKILL"
+                      - name: SOCKET_PATH
+                        value: "/var/run/docker.sock"
+                      - name: CONTAINER_RUNTIME
+                        value: "docker"
+                      - name: TOTAL_CHAOS_DURATION
+                        value: "120"
+                      - name: PODS_AFFECTED_PERC
+                        value: ""
+                      - name: LIB_IMAGE
+                        value: "litmuschaos/go-runner:latest"
+                      - name: SEQUENCE
+                        value: "parallel"
+                    labels:
+                      name: container-kill-left-leg
+                      app.kubernetes.io/part-of: litmus
+                      app.kubernetes.io/component: experiment-job
+                      app.kubernetes.io/version: latest
+                
+          - name: memory-hog-left-leg
+            path: /tmp/memory-hog-left-leg.yaml
+            raw:
+              data: |
+                apiVersion: litmuschaos.io/v1alpha1
+                description:
+                  message: |
+                    Injects memory consumption on pods belonging to an app deployment
+                kind: ChaosExperiment
+                metadata:
+                  name: memory-hog-left-leg
+                  labels:
+                    name: memory-hog-left-leg
+                    app.kubernetes.io/part-of: litmus
+                    app.kubernetes.io/component: chaosexperiment
+                    app.kubernetes.io/version: latest
+                spec:
+                  definition:
+                    scope: Namespaced
+                    permissions:
+                      - apiGroups:
+                          - ""
+                          - batch
+                          - apps
+                          - apps.openshift.io
+                          - argoproj.io
+                          - litmuschaos.io
+                        resources:
+                          - jobs
+                          - pods
+                          - pods/log
+                          - replicationcontrollers
+                          - deployments
+                          - statefulsets
+                          - daemonsets
+                          - replicasets
+                          - deploymentconfigs
+                          - rollouts
+                          - pods/exec
+                          - events
+                          - chaosengines
+                          - chaosexperiments
+                          - chaosresults
+                        verbs:
+                          - create
+                          - list
+                          - get
+                          - patch
+                          - update
+                          - delete
+                          - deletecollection
+                    image: litmuschaos/go-runner:ci
+                    imagePullPolicy: Always
+                    args:
+                      - -c
+                      - ./experiments -name pod-memory-hog-exec
+                    command:
+                      - /bin/bash
+                    env:
+                      - name: TOTAL_CHAOS_DURATION
+                        value: "30"
+                      - name: MEMORY_CONSUMPTION
+                        value: "500"
+                      - name: PODS_AFFECTED_PERC
+                        value: ""
+                      - name: RAMP_TIME
+                        value: ""
+                      - name: LIB
+                        value: "pumba"
+                      - name: CHAOS_KILL_COMMAND
+                        value: "kill $(find /proc -name exe -lname '*/dd' 2>&1 | grep -v 'Permission denied' | awk -F/ '{print $(NF-1)}' | head -n 1)"
+                      - name: TARGET_PODS
+                        value: ""
+                      - name: SEQUENCE
+                        value: "parallel"
+                    labels:
+                      name: memory-hog-left-leg
+                      app.kubernetes.io/part-of: litmus
+                      app.kubernetes.io/component: experiment-job
+                      app.kubernetes.io/version: latest
+                container:
+        args:
+        command:
+          - sh
+          - -c
+        image: litmuschaos/k8s:latest
+
+    - name: container-kill-left-leg
+      inputs:
+        artifacts:
+          - name: container-kill-left-leg
+            path: /tmp/chaosengine-container-kill-left-leg.yaml
+            raw:
+              data: |
+
+                apiVersion: litmuschaos.io/v1alpha1
                 kind: ChaosEngine
                 metadata:
-                  name: podtato-main-pod-delete-chaos
-                  namespace: {{workflow.parameters.adminModeNamespace}}
-                  labels:
-                    context: "{{workflow.parameters.adminModeNamespace}}_podtato-main"
+                  name: chaos-container-kill-left-leg
+                  namespace: litmus
                 spec:
                   appinfo:
-                    appns: {{workflow.parameters.adminModeNamespace}}
-                    applabel: 'name=podtato-main'
+                    appns: 'default'
+                    applabel: 'app.kubernetes.io/component=podtato-head-left-leg'
                     appkind: 'deployment'
+                  # It can be active/stop
                   engineState: 'active'
                   chaosServiceAccount: litmus-admin
-                  jobCleanUpPolicy: 'retain'
-                  components:
-                    runner:
-                      imagePullPolicy: Always
                   experiments:
-                    - name: pod-delete
+                    - name: container-kill-left-leg
                       spec:
-                        probe:
-                        - name: "check-podtato-main-access-url"
-                          type: "httpProbe"
-                          httpProbe/inputs:
-                            url: "http://podtato-main.{{workflow.parameters.adminModeNamespace}}.svc.cluster.local:9000"
-                            insecureSkipVerify: false
-                            method:
-                              get:
-                                criteria: "=="
-                                responseCode: "200"
-                          mode: "Continuous"
-                          runProperties:
-                            probeTimeout: 1
-                            interval: 1
-                            retry: 1
                         components:
-                          env:
-                            - name: TOTAL_CHAOS_DURATION
-                              value: '30'
-                            # set chaos interval (in sec) as desired
-                            - name: CHAOS_INTERVAL
-                              value: '10'
-                            # pod failures without '--force' & default terminationGracePeriodSeconds
-                            - name: FORCE
-                              value: 'false'
+                          env: []
+                
       container:
+        args:
+          - -file=/tmp/chaosengine-container-kill-left-leg.yaml
+          - -saveName=/tmp/engine-name
         image: litmuschaos/litmus-checker:latest
-        args: ["-file=/tmp/chaosengine.yaml","-saveName=/tmp/engine-name"]        
+    - name: memory-hog-left-leg
+      inputs:
+        artifacts:
+          - name: memory-hog-left-leg
+            path: /tmp/chaosengine-memory-hog-left-leg.yaml
+            raw:
+              data: |
 
-    - name: delete-application
+                apiVersion: litmuschaos.io/v1alpha1
+                kind: ChaosEngine
+                metadata:
+                  name: chaos-memory-hog-left-leg
+                  namespace: litmus
+                spec:
+                  appinfo:
+                    appns: 'default'
+                    applabel: 'app.kubernetes.io/component=podtato-head-left-leg'
+                    appkind: 'deployment'
+                  # It can be active/stop
+                  engineState: 'active'
+                  chaosServiceAccount: litmus-admin
+                  experiments:
+                    - name: memory-hog-left-leg
+                      spec:
+                        components:
+                          env: []
+                
       container:
-        image: litmuschaos/litmus-app-deployer:latest
-        args: ["-namespace={{workflow.parameters.adminModeNamespace}}","-typeName=resilient","-operation=delete","-app=podtato-head"]
-    
-    - name: revert-chaos
-      container:
-        image: litmuschaos/k8s:latest
-        command: [sh, -c]
-        args: 
-          [ 
-            "kubectl delete chaosengine podtato-main-pod-delete-chaos -n {{workflow.parameters.adminModeNamespace}}",
-          ]
+        args:
+          - -file=/tmp/chaosengine-memory-hog-left-leg.yaml
+          - -saveName=/tmp/engine-name
+        image: litmuschaos/litmus-checker:latest
