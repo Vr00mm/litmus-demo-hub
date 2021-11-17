@@ -1,0 +1,107 @@
+packageName: /home/robin/.kube/config-litmus
+experiments:
+    - name: container-kill-chaos-center-litmus-mongo-mongo
+      CSV: container-kill-chaos-center-litmus-mongo-mongo.chartserviceversion.yaml
+      desc: container-kill-chaos-center-litmus-mongo-mongo
+    - name: container-kill-chaos-center-litmus-frontend-litmusportal-frontend
+      CSV: container-kill-chaos-center-litmus-frontend-litmusportal-frontend.chartserviceversion.yaml
+      desc: container-kill-chaos-center-litmus-frontend-litmusportal-frontend
+    - name: container-kill-chaos-center-litmus-server-graphql-server
+      CSV: container-kill-chaos-center-litmus-server-graphql-server.chartserviceversion.yaml
+      desc: container-kill-chaos-center-litmus-server-graphql-server
+    - name: container-kill-chaos-center-litmus-server-auth-server
+      CSV: container-kill-chaos-center-litmus-server-auth-server.chartserviceversion.yaml
+      desc: container-kill-chaos-center-litmus-server-auth-server
+    - name: pod-delete-chaos-center-litmus-mongo
+      CSV: pod-delete-chaos-center-litmus-mongo.chartserviceversion.yaml
+      desc: pod-delete-chaos-center-litmus-mongo
+    - name: pod-delete-chaos-center-litmus-frontend
+      CSV: pod-delete-chaos-center-litmus-frontend.chartserviceversion.yaml
+      desc: pod-delete-chaos-center-litmus-frontend
+    - name: pod-delete-chaos-center-litmus-server
+      CSV: pod-delete-chaos-center-litmus-server.chartserviceversion.yaml
+      desc: pod-delete-chaos-center-litmus-server
+    - name: pod-cpu-hog-chaos-center-litmus-mongo-mongo
+      CSV: pod-cpu-hog-chaos-center-litmus-mongo-mongo.chartserviceversion.yaml
+      desc: pod-cpu-hog-chaos-center-litmus-mongo-mongo
+    - name: pod-cpu-hog-chaos-center-litmus-frontend-litmusportal-frontend
+      CSV: pod-cpu-hog-chaos-center-litmus-frontend-litmusportal-frontend.chartserviceversion.yaml
+      desc: pod-cpu-hog-chaos-center-litmus-frontend-litmusportal-frontend
+    - name: pod-cpu-hog-chaos-center-litmus-server-graphql-server
+      CSV: pod-cpu-hog-chaos-center-litmus-server-graphql-server.chartserviceversion.yaml
+      desc: pod-cpu-hog-chaos-center-litmus-server-graphql-server
+    - name: pod-cpu-hog-chaos-center-litmus-server-auth-server
+      CSV: pod-cpu-hog-chaos-center-litmus-server-auth-server.chartserviceversion.yaml
+      desc: pod-cpu-hog-chaos-center-litmus-server-auth-server
+    - name: pod-mem-hog-chaos-center-litmus-mongo-mongo
+      CSV: pod-mem-hog-chaos-center-litmus-mongo-mongo.chartserviceversion.yaml
+      desc: pod-mem-hog-chaos-center-litmus-mongo-mongo
+    - name: pod-mem-hog-chaos-center-litmus-frontend-litmusportal-frontend
+      CSV: pod-mem-hog-chaos-center-litmus-frontend-litmusportal-frontend.chartserviceversion.yaml
+      desc: pod-mem-hog-chaos-center-litmus-frontend-litmusportal-frontend
+    - name: pod-mem-hog-chaos-center-litmus-server-graphql-server
+      CSV: pod-mem-hog-chaos-center-litmus-server-graphql-server.chartserviceversion.yaml
+      desc: pod-mem-hog-chaos-center-litmus-server-graphql-server
+    - name: pod-mem-hog-chaos-center-litmus-server-auth-server
+      CSV: pod-mem-hog-chaos-center-litmus-server-auth-server.chartserviceversion.yaml
+      desc: pod-mem-hog-chaos-center-litmus-server-auth-server
+    - name: pod-io-stress-chaos-center-litmus-mongo-mongo
+      CSV: pod-io-stress-chaos-center-litmus-mongo-mongo.chartserviceversion.yaml
+      desc: pod-io-stress-chaos-center-litmus-mongo-mongo
+    - name: pod-io-stress-chaos-center-litmus-frontend-litmusportal-frontend
+      CSV: pod-io-stress-chaos-center-litmus-frontend-litmusportal-frontend.chartserviceversion.yaml
+      desc: pod-io-stress-chaos-center-litmus-frontend-litmusportal-frontend
+    - name: pod-io-stress-chaos-center-litmus-server-graphql-server
+      CSV: pod-io-stress-chaos-center-litmus-server-graphql-server.chartserviceversion.yaml
+      desc: pod-io-stress-chaos-center-litmus-server-graphql-server
+    - name: pod-io-stress-chaos-center-litmus-server-auth-server
+      CSV: pod-io-stress-chaos-center-litmus-server-auth-server.chartserviceversion.yaml
+      desc: pod-io-stress-chaos-center-litmus-server-auth-server
+    - name: pod-network-corruption-chaos-center-litmus-mongo-mongo
+      CSV: pod-network-corruption-chaos-center-litmus-mongo-mongo.chartserviceversion.yaml
+      desc: pod-network-corruption-chaos-center-litmus-mongo-mongo
+    - name: pod-network-corruption-chaos-center-litmus-frontend-litmusportal-frontend
+      CSV: pod-network-corruption-chaos-center-litmus-frontend-litmusportal-frontend.chartserviceversion.yaml
+      desc: pod-network-corruption-chaos-center-litmus-frontend-litmusportal-frontend
+    - name: pod-network-corruption-chaos-center-litmus-server-graphql-server
+      CSV: pod-network-corruption-chaos-center-litmus-server-graphql-server.chartserviceversion.yaml
+      desc: pod-network-corruption-chaos-center-litmus-server-graphql-server
+    - name: pod-network-corruption-chaos-center-litmus-server-auth-server
+      CSV: pod-network-corruption-chaos-center-litmus-server-auth-server.chartserviceversion.yaml
+      desc: pod-network-corruption-chaos-center-litmus-server-auth-server
+    - name: pod-network-duplication-chaos-center-litmus-mongo-mongo
+      CSV: pod-network-duplication-chaos-center-litmus-mongo-mongo.chartserviceversion.yaml
+      desc: pod-network-duplication-chaos-center-litmus-mongo-mongo
+    - name: pod-network-duplication-chaos-center-litmus-frontend-litmusportal-frontend
+      CSV: pod-network-duplication-chaos-center-litmus-frontend-litmusportal-frontend.chartserviceversion.yaml
+      desc: pod-network-duplication-chaos-center-litmus-frontend-litmusportal-frontend
+    - name: pod-network-duplication-chaos-center-litmus-server-graphql-server
+      CSV: pod-network-duplication-chaos-center-litmus-server-graphql-server.chartserviceversion.yaml
+      desc: pod-network-duplication-chaos-center-litmus-server-graphql-server
+    - name: pod-network-duplication-chaos-center-litmus-server-auth-server
+      CSV: pod-network-duplication-chaos-center-litmus-server-auth-server.chartserviceversion.yaml
+      desc: pod-network-duplication-chaos-center-litmus-server-auth-server
+    - name: pod-network-loss-chaos-center-litmus-mongo-mongo
+      CSV: pod-network-loss-chaos-center-litmus-mongo-mongo.chartserviceversion.yaml
+      desc: pod-network-loss-chaos-center-litmus-mongo-mongo
+    - name: pod-network-loss-chaos-center-litmus-frontend-litmusportal-frontend
+      CSV: pod-network-loss-chaos-center-litmus-frontend-litmusportal-frontend.chartserviceversion.yaml
+      desc: pod-network-loss-chaos-center-litmus-frontend-litmusportal-frontend
+    - name: pod-network-loss-chaos-center-litmus-server-graphql-server
+      CSV: pod-network-loss-chaos-center-litmus-server-graphql-server.chartserviceversion.yaml
+      desc: pod-network-loss-chaos-center-litmus-server-graphql-server
+    - name: pod-network-loss-chaos-center-litmus-server-auth-server
+      CSV: pod-network-loss-chaos-center-litmus-server-auth-server.chartserviceversion.yaml
+      desc: pod-network-loss-chaos-center-litmus-server-auth-server
+    - name: pod-network-latency-chaos-center-litmus-mongo-mongo
+      CSV: pod-network-latency-chaos-center-litmus-mongo-mongo.chartserviceversion.yaml
+      desc: pod-network-latency-chaos-center-litmus-mongo-mongo
+    - name: pod-network-latency-chaos-center-litmus-frontend-litmusportal-frontend
+      CSV: pod-network-latency-chaos-center-litmus-frontend-litmusportal-frontend.chartserviceversion.yaml
+      desc: pod-network-latency-chaos-center-litmus-frontend-litmusportal-frontend
+    - name: pod-network-latency-chaos-center-litmus-server-graphql-server
+      CSV: pod-network-latency-chaos-center-litmus-server-graphql-server.chartserviceversion.yaml
+      desc: pod-network-latency-chaos-center-litmus-server-graphql-server
+    - name: pod-network-latency-chaos-center-litmus-server-auth-server
+      CSV: pod-network-latency-chaos-center-litmus-server-auth-server.chartserviceversion.yaml
+      desc: pod-network-latency-chaos-center-litmus-server-auth-server

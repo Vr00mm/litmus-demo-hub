@@ -1,0 +1,94 @@
+apiVersion: litmuchaos.io/v1alpha1
+kind: ChartServiceVersion
+metadata:
+    name: /home/robin/.kube/config-podtato-kubectl
+    version: 0.1.16
+    annotations:
+        categories: Kubernetes
+        vendor: ""
+        support: ""
+spec:
+    displayName: /home/robin/.kube/config-podtato-kubectl
+    experiments:
+        - container-kill-podtato-hats-server
+        - container-kill-podtato-left-arm-server
+        - container-kill-podtato-left-leg-server
+        - container-kill-podtato-main-server
+        - container-kill-podtato-right-arm-server
+        - container-kill-podtato-right-leg-server
+        - pod-delete-podtato-hats
+        - pod-delete-podtato-left-arm
+        - pod-delete-podtato-left-leg
+        - pod-delete-podtato-main
+        - pod-delete-podtato-right-arm
+        - pod-delete-podtato-right-leg
+        - pod-cpu-hog-podtato-hats-server
+        - pod-cpu-hog-podtato-left-arm-server
+        - pod-cpu-hog-podtato-left-leg-server
+        - pod-cpu-hog-podtato-main-server
+        - pod-cpu-hog-podtato-right-arm-server
+        - pod-cpu-hog-podtato-right-leg-server
+        - pod-mem-hog-podtato-hats-server
+        - pod-mem-hog-podtato-left-arm-server
+        - pod-mem-hog-podtato-left-leg-server
+        - pod-mem-hog-podtato-main-server
+        - pod-mem-hog-podtato-right-arm-server
+        - pod-mem-hog-podtato-right-leg-server
+        - pod-io-stress-podtato-hats-server
+        - pod-io-stress-podtato-left-arm-server
+        - pod-io-stress-podtato-left-leg-server
+        - pod-io-stress-podtato-main-server
+        - pod-io-stress-podtato-right-arm-server
+        - pod-io-stress-podtato-right-leg-server
+        - pod-network-corruption-podtato-hats-server
+        - pod-network-corruption-podtato-left-arm-server
+        - pod-network-corruption-podtato-left-leg-server
+        - pod-network-corruption-podtato-main-server
+        - pod-network-corruption-podtato-right-arm-server
+        - pod-network-corruption-podtato-right-leg-server
+        - pod-network-duplication-podtato-hats-server
+        - pod-network-duplication-podtato-left-arm-server
+        - pod-network-duplication-podtato-left-leg-server
+        - pod-network-duplication-podtato-main-server
+        - pod-network-duplication-podtato-right-arm-server
+        - pod-network-duplication-podtato-right-leg-server
+        - pod-network-loss-podtato-hats-server
+        - pod-network-loss-podtato-left-arm-server
+        - pod-network-loss-podtato-left-leg-server
+        - pod-network-loss-podtato-main-server
+        - pod-network-loss-podtato-right-arm-server
+        - pod-network-loss-podtato-right-leg-server
+        - pod-network-latency-podtato-hats-server
+        - pod-network-latency-podtato-left-arm-server
+        - pod-network-latency-podtato-left-leg-server
+        - pod-network-latency-podtato-main-server
+        - pod-network-latency-podtato-right-arm-server
+        - pod-network-latency-podtato-right-leg-server
+    categoryDescription: |
+        Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications. It groups containers that make up an application into logical units for easier management and discovery. It will install all the experiments which can be used to inject chaos into containerized applications.
+    keywords: []
+    platforms: []
+    maturity: ""
+    chaosType: ""
+    maintainers:
+        - name: ksatchit
+          email: karthik.s@mayadata.io
+    minKubeVersion: 1.12.0
+    provider:
+        name: Mayadata
+    labels:
+        app.kubernetes.io/component: ""
+        app.kubernetes.io/version: ""
+    links:
+        - name: Kubernetes Website
+          url: https://kubernetes.io
+        - name: Source Code
+          url: https://github.com/kubernetes/kubernetes
+        - name: Kubernetes Slack
+          url: https://slack.kubernetes.io/
+        - name: Documentation
+          url: https://litmuschaos.github.io/litmus/experiments/categories/contents/#generic
+    icon:
+        - url: https://raw.githubusercontent.com/litmuschaos/charthub.litmuschaos.io/master/public/litmus.ico
+          mediatype: image/png
+    chaosexpcrdlink: https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/experiments.yaml

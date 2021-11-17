@@ -1,0 +1,75 @@
+apiVersion: litmuchaos.io/v1alpha1
+kind: ChartServiceVersion
+metadata:
+    name: /home/robin/.kube/config-litmus
+    version: 0.1.16
+    annotations:
+        categories: Kubernetes
+        vendor: ""
+        support: ""
+spec:
+    displayName: /home/robin/.kube/config-litmus
+    experiments:
+        - container-kill-chaos-center-litmus-mongo-mongo
+        - container-kill-chaos-center-litmus-frontend-litmusportal-frontend
+        - container-kill-chaos-center-litmus-server-graphql-server
+        - container-kill-chaos-center-litmus-server-auth-server
+        - pod-delete-chaos-center-litmus-mongo
+        - pod-delete-chaos-center-litmus-frontend
+        - pod-delete-chaos-center-litmus-server
+        - pod-cpu-hog-chaos-center-litmus-mongo-mongo
+        - pod-cpu-hog-chaos-center-litmus-frontend-litmusportal-frontend
+        - pod-cpu-hog-chaos-center-litmus-server-graphql-server
+        - pod-cpu-hog-chaos-center-litmus-server-auth-server
+        - pod-mem-hog-chaos-center-litmus-mongo-mongo
+        - pod-mem-hog-chaos-center-litmus-frontend-litmusportal-frontend
+        - pod-mem-hog-chaos-center-litmus-server-graphql-server
+        - pod-mem-hog-chaos-center-litmus-server-auth-server
+        - pod-io-stress-chaos-center-litmus-mongo-mongo
+        - pod-io-stress-chaos-center-litmus-frontend-litmusportal-frontend
+        - pod-io-stress-chaos-center-litmus-server-graphql-server
+        - pod-io-stress-chaos-center-litmus-server-auth-server
+        - pod-network-corruption-chaos-center-litmus-mongo-mongo
+        - pod-network-corruption-chaos-center-litmus-frontend-litmusportal-frontend
+        - pod-network-corruption-chaos-center-litmus-server-graphql-server
+        - pod-network-corruption-chaos-center-litmus-server-auth-server
+        - pod-network-duplication-chaos-center-litmus-mongo-mongo
+        - pod-network-duplication-chaos-center-litmus-frontend-litmusportal-frontend
+        - pod-network-duplication-chaos-center-litmus-server-graphql-server
+        - pod-network-duplication-chaos-center-litmus-server-auth-server
+        - pod-network-loss-chaos-center-litmus-mongo-mongo
+        - pod-network-loss-chaos-center-litmus-frontend-litmusportal-frontend
+        - pod-network-loss-chaos-center-litmus-server-graphql-server
+        - pod-network-loss-chaos-center-litmus-server-auth-server
+        - pod-network-latency-chaos-center-litmus-mongo-mongo
+        - pod-network-latency-chaos-center-litmus-frontend-litmusportal-frontend
+        - pod-network-latency-chaos-center-litmus-server-graphql-server
+        - pod-network-latency-chaos-center-litmus-server-auth-server
+    categoryDescription: |
+        Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications. It groups containers that make up an application into logical units for easier management and discovery. It will install all the experiments which can be used to inject chaos into containerized applications.
+    keywords: []
+    platforms: []
+    maturity: ""
+    chaosType: ""
+    maintainers:
+        - name: ksatchit
+          email: karthik.s@mayadata.io
+    minKubeVersion: 1.12.0
+    provider:
+        name: Mayadata
+    labels:
+        app.kubernetes.io/component: ""
+        app.kubernetes.io/version: ""
+    links:
+        - name: Kubernetes Website
+          url: https://kubernetes.io
+        - name: Source Code
+          url: https://github.com/kubernetes/kubernetes
+        - name: Kubernetes Slack
+          url: https://slack.kubernetes.io/
+        - name: Documentation
+          url: https://litmuschaos.github.io/litmus/experiments/categories/contents/#generic
+    icon:
+        - url: https://raw.githubusercontent.com/litmuschaos/charthub.litmuschaos.io/master/public/litmus.ico
+          mediatype: image/png
+    chaosexpcrdlink: https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/experiments.yaml
