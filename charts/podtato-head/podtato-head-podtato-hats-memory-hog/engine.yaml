@@ -1,0 +1,18 @@
+apiVersion: litmuschaos.io/v1alpha1
+kind: ChaosEngine
+metadata:
+  name: chaos-podtato-head-podtato-hats-memory-hog
+  namespace: oi137-litmus
+spec:
+  appinfo:
+    appns: 'podtato-kubectl'
+    applabel: 'app.kubernetes.io/component=podtato-main-hats'
+    appkind: 'deployment'
+  # It can be active/stop
+  engineState: 'active'
+  chaosServiceAccount: litmus-admin
+  experiments:
+    - name: podtato-head-podtato-hats-memory-hog
+      spec:
+        components:
+          env: []

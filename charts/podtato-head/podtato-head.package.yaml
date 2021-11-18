@@ -1,0 +1,14 @@
+packageName: podtato-head
+experiments:
+  - name: podtato-head-podtato-hats-container-kill
+    CSV: podtato-head-podtato-hats-container-kill.chartserviceversion.yaml
+    desc: "podtato-head-podtato-hats-container-kill"
+  - name: podtato-head-podtato-hats-cpu-hog
+    CSV: podtato-head-podtato-hats-cpu-hog.chartserviceversion.yaml
+    desc: "podtato-head-podtato-hats-cpu-hog"
+  - name: podtato-head-podtato-hats-memory-hog
+    CSV: podtato-head-podtato-hats-memory-hog.chartserviceversion.yaml
+    desc: "podtato-head-podtato-hats-memory-hog"
+  - name: podtato-head-podtato-hats-net-loss
+    CSV: podtato-head-podtato-hats-net-loss.chartserviceversion.yaml
+    desc: "podtato-head-podtato-hats-net-loss"
