@@ -6,7 +6,7 @@ metadata:
 spec:
   appinfo:
     appns: 'podtato-kubectl'
-    applabel: 'app.kubernetes.io/component=podtato-main-hats'
+    applabel: 'component=podtato-hats'
     appkind: 'deployment'
   # It can be active/stop
   engineState: 'active'
