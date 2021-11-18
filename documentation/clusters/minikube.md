@@ -6,6 +6,6 @@
 
 | Namespace | Lien |
 | ------ | ------ |
-| kube-system | [minikube/kube-system.md](documentation/clusters/minikube/kube-system.md) |
-| litmus | [minikube/litmus.md](documentation/clusters/minikube/litmus.md) |
-| monitoring | [minikube/monitoring.md](documentation/clusters/minikube/monitoring.md) |
+| kube-system | [/documentation/clusters/minikube/kube-system.md](documentation/clusters/minikube/kube-system.md) |
+| litmus | [/documentation/clusters/minikube/litmus.md](documentation/clusters/minikube/litmus.md) |
+| monitoring | [/documentation/clusters/minikube/monitoring.md](documentation/clusters/minikube/monitoring.md) |
