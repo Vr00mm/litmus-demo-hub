@@ -1,0 +1,13 @@
+apiVersion: ""
+kind: ""
+metadata:
+    name: ""
+    namespace: ""
+spec:
+    engineState: ""
+    appinfo:
+        appns: kube-system
+        applabel: k8s-app=kube-dns
+        appkind: deployment
+    chaosServiceAccount: ""
+    experiments: []
