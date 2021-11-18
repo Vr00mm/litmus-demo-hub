@@ -1,4 +1,4 @@
-packageName: /home/robin/.kube/config-monitoring
+packageName: minikube-monitoring
 experiments:
     - name: container-kill-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
       CSV: container-kill-alertmanager-kube-prometheus-stack-alertmanager-alertmanager.chartserviceversion.yaml

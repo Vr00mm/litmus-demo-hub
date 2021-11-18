@@ -1,4 +1,4 @@
-packageName: /home/robin/.kube/config-podtato-kubectl
+packageName: minikube-podtato-kubectl
 experiments:
     - name: container-kill-podtato-hats-server
       CSV: container-kill-podtato-hats-server.chartserviceversion.yaml

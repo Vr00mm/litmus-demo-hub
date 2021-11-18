@@ -1,14 +1,14 @@
 apiVersion: litmuchaos.io/v1alpha1
 kind: ChartServiceVersion
 metadata:
-    name: /home/robin/.kube/config-monitoring
+    name: minikube-monitoring
     version: 0.1.16
     annotations:
         categories: Kubernetes
         vendor: ""
         support: ""
 spec:
-    displayName: /home/robin/.kube/config-monitoring
+    displayName: minikube-monitoring
     experiments:
         - container-kill-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
         - container-kill-alertmanager-kube-prometheus-stack-alertmanager-config-reloader

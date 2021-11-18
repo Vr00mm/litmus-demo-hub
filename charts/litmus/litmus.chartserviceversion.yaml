@@ -1,50 +1,95 @@
 apiVersion: litmuchaos.io/v1alpha1
 kind: ChartServiceVersion
 metadata:
-    name: /home/robin/.kube/config-litmus
+    name: minikube-litmus
     version: 0.1.16
     annotations:
         categories: Kubernetes
         vendor: ""
         support: ""
 spec:
-    displayName: /home/robin/.kube/config-litmus
+    displayName: minikube-litmus
     experiments:
         - container-kill-chaos-center-litmus-mongo-mongo
         - container-kill-chaos-center-litmus-frontend-litmusportal-frontend
         - container-kill-chaos-center-litmus-server-graphql-server
         - container-kill-chaos-center-litmus-server-auth-server
+        - container-kill-chaos-exporter-chaos-exporter
+        - container-kill-chaos-operator-ce-chaos-operator
+        - container-kill-event-tracker-litmus-event-tracker
+        - container-kill-subscriber-subscriber
+        - container-kill-workflow-controller-workflow-controller
         - pod-delete-chaos-center-litmus-mongo
         - pod-delete-chaos-center-litmus-frontend
         - pod-delete-chaos-center-litmus-server
+        - pod-delete-chaos-exporter
+        - pod-delete-chaos-operator-ce
+        - pod-delete-event-tracker
+        - pod-delete-subscriber
+        - pod-delete-workflow-controller
         - pod-cpu-hog-chaos-center-litmus-mongo-mongo
         - pod-cpu-hog-chaos-center-litmus-frontend-litmusportal-frontend
         - pod-cpu-hog-chaos-center-litmus-server-graphql-server
         - pod-cpu-hog-chaos-center-litmus-server-auth-server
+        - pod-cpu-hog-chaos-exporter-chaos-exporter
+        - pod-cpu-hog-chaos-operator-ce-chaos-operator
+        - pod-cpu-hog-event-tracker-litmus-event-tracker
+        - pod-cpu-hog-subscriber-subscriber
+        - pod-cpu-hog-workflow-controller-workflow-controller
         - pod-mem-hog-chaos-center-litmus-mongo-mongo
         - pod-mem-hog-chaos-center-litmus-frontend-litmusportal-frontend
         - pod-mem-hog-chaos-center-litmus-server-graphql-server
         - pod-mem-hog-chaos-center-litmus-server-auth-server
+        - pod-mem-hog-chaos-exporter-chaos-exporter
+        - pod-mem-hog-chaos-operator-ce-chaos-operator
+        - pod-mem-hog-event-tracker-litmus-event-tracker
+        - pod-mem-hog-subscriber-subscriber
+        - pod-mem-hog-workflow-controller-workflow-controller
         - pod-io-stress-chaos-center-litmus-mongo-mongo
         - pod-io-stress-chaos-center-litmus-frontend-litmusportal-frontend
         - pod-io-stress-chaos-center-litmus-server-graphql-server
         - pod-io-stress-chaos-center-litmus-server-auth-server
+        - pod-io-stress-chaos-exporter-chaos-exporter
+        - pod-io-stress-chaos-operator-ce-chaos-operator
+        - pod-io-stress-event-tracker-litmus-event-tracker
+        - pod-io-stress-subscriber-subscriber
+        - pod-io-stress-workflow-controller-workflow-controller
         - pod-network-corruption-chaos-center-litmus-mongo-mongo
         - pod-network-corruption-chaos-center-litmus-frontend-litmusportal-frontend
         - pod-network-corruption-chaos-center-litmus-server-graphql-server
         - pod-network-corruption-chaos-center-litmus-server-auth-server
+        - pod-network-corruption-chaos-exporter-chaos-exporter
+        - pod-network-corruption-chaos-operator-ce-chaos-operator
+        - pod-network-corruption-event-tracker-litmus-event-tracker
+        - pod-network-corruption-subscriber-subscriber
+        - pod-network-corruption-workflow-controller-workflow-controller
         - pod-network-duplication-chaos-center-litmus-mongo-mongo
         - pod-network-duplication-chaos-center-litmus-frontend-litmusportal-frontend
         - pod-network-duplication-chaos-center-litmus-server-graphql-server
         - pod-network-duplication-chaos-center-litmus-server-auth-server
+        - pod-network-duplication-chaos-exporter-chaos-exporter
+        - pod-network-duplication-chaos-operator-ce-chaos-operator
+        - pod-network-duplication-event-tracker-litmus-event-tracker
+        - pod-network-duplication-subscriber-subscriber
+        - pod-network-duplication-workflow-controller-workflow-controller
         - pod-network-loss-chaos-center-litmus-mongo-mongo
         - pod-network-loss-chaos-center-litmus-frontend-litmusportal-frontend
         - pod-network-loss-chaos-center-litmus-server-graphql-server
         - pod-network-loss-chaos-center-litmus-server-auth-server
+        - pod-network-loss-chaos-exporter-chaos-exporter
+        - pod-network-loss-chaos-operator-ce-chaos-operator
+        - pod-network-loss-event-tracker-litmus-event-tracker
+        - pod-network-loss-subscriber-subscriber
+        - pod-network-loss-workflow-controller-workflow-controller
         - pod-network-latency-chaos-center-litmus-mongo-mongo
         - pod-network-latency-chaos-center-litmus-frontend-litmusportal-frontend
         - pod-network-latency-chaos-center-litmus-server-graphql-server
         - pod-network-latency-chaos-center-litmus-server-auth-server
+        - pod-network-latency-chaos-exporter-chaos-exporter
+        - pod-network-latency-chaos-operator-ce-chaos-operator
+        - pod-network-latency-event-tracker-litmus-event-tracker
+        - pod-network-latency-subscriber-subscriber
+        - pod-network-latency-workflow-controller-workflow-controller
     categoryDescription: |
         Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications. It groups containers that make up an application into logical units for easier management and discovery. It will install all the experiments which can be used to inject chaos into containerized applications.
     keywords: []

@@ -1,4 +1,4 @@
-packageName: /home/robin/.kube/config-kube-system
+packageName: minikube-kube-system
 experiments:
     - name: container-kill-coredns-coredns
       CSV: container-kill-coredns-coredns.chartserviceversion.yaml
