@@ -1,0 +1,13 @@
+apiVersion: ""
+kind: ""
+metadata:
+    name: ""
+    namespace: ""
+spec:
+    engineState: ""
+    appinfo:
+        appns: litmus
+        applabel: app=chaos-exporter
+        appkind: deployment
+    chaosServiceAccount: ""
+    experiments: []

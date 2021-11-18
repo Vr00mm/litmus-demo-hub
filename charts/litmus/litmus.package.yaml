@@ -1,0 +1,242 @@
+packageName: minikube-litmus
+experiments:
+    - name: container-kill-chaos-center-litmus-mongo-mongo
+      CSV: container-kill-chaos-center-litmus-mongo-mongo.chartserviceversion.yaml
+      desc: container-kill-chaos-center-litmus-mongo-mongo
+    - name: container-kill-chaos-center-litmus-frontend-litmusportal-frontend
+      CSV: container-kill-chaos-center-litmus-frontend-litmusportal-frontend.chartserviceversion.yaml
+      desc: container-kill-chaos-center-litmus-frontend-litmusportal-frontend
+    - name: container-kill-chaos-center-litmus-server-graphql-server
+      CSV: container-kill-chaos-center-litmus-server-graphql-server.chartserviceversion.yaml
+      desc: container-kill-chaos-center-litmus-server-graphql-server
+    - name: container-kill-chaos-center-litmus-server-auth-server
+      CSV: container-kill-chaos-center-litmus-server-auth-server.chartserviceversion.yaml
+      desc: container-kill-chaos-center-litmus-server-auth-server
+    - name: container-kill-chaos-exporter-chaos-exporter
+      CSV: container-kill-chaos-exporter-chaos-exporter.chartserviceversion.yaml
+      desc: container-kill-chaos-exporter-chaos-exporter
+    - name: container-kill-chaos-operator-ce-chaos-operator
+      CSV: container-kill-chaos-operator-ce-chaos-operator.chartserviceversion.yaml
+      desc: container-kill-chaos-operator-ce-chaos-operator
+    - name: container-kill-event-tracker-litmus-event-tracker
+      CSV: container-kill-event-tracker-litmus-event-tracker.chartserviceversion.yaml
+      desc: container-kill-event-tracker-litmus-event-tracker
+    - name: container-kill-subscriber-subscriber
+      CSV: container-kill-subscriber-subscriber.chartserviceversion.yaml
+      desc: container-kill-subscriber-subscriber
+    - name: container-kill-workflow-controller-workflow-controller
+      CSV: container-kill-workflow-controller-workflow-controller.chartserviceversion.yaml
+      desc: container-kill-workflow-controller-workflow-controller
+    - name: pod-delete-chaos-center-litmus-mongo
+      CSV: pod-delete-chaos-center-litmus-mongo.chartserviceversion.yaml
+      desc: pod-delete-chaos-center-litmus-mongo
+    - name: pod-delete-chaos-center-litmus-frontend
+      CSV: pod-delete-chaos-center-litmus-frontend.chartserviceversion.yaml
+      desc: pod-delete-chaos-center-litmus-frontend
+    - name: pod-delete-chaos-center-litmus-server
+      CSV: pod-delete-chaos-center-litmus-server.chartserviceversion.yaml
+      desc: pod-delete-chaos-center-litmus-server
+    - name: pod-delete-chaos-exporter
+      CSV: pod-delete-chaos-exporter.chartserviceversion.yaml
+      desc: pod-delete-chaos-exporter
+    - name: pod-delete-chaos-operator-ce
+      CSV: pod-delete-chaos-operator-ce.chartserviceversion.yaml
+      desc: pod-delete-chaos-operator-ce
+    - name: pod-delete-event-tracker
+      CSV: pod-delete-event-tracker.chartserviceversion.yaml
+      desc: pod-delete-event-tracker
+    - name: pod-delete-subscriber
+      CSV: pod-delete-subscriber.chartserviceversion.yaml
+      desc: pod-delete-subscriber
+    - name: pod-delete-workflow-controller
+      CSV: pod-delete-workflow-controller.chartserviceversion.yaml
+      desc: pod-delete-workflow-controller
+    - name: pod-cpu-hog-chaos-center-litmus-mongo-mongo
+      CSV: pod-cpu-hog-chaos-center-litmus-mongo-mongo.chartserviceversion.yaml
+      desc: pod-cpu-hog-chaos-center-litmus-mongo-mongo
+    - name: pod-cpu-hog-chaos-center-litmus-frontend-litmusportal-frontend
+      CSV: pod-cpu-hog-chaos-center-litmus-frontend-litmusportal-frontend.chartserviceversion.yaml
+      desc: pod-cpu-hog-chaos-center-litmus-frontend-litmusportal-frontend
+    - name: pod-cpu-hog-chaos-center-litmus-server-graphql-server
+      CSV: pod-cpu-hog-chaos-center-litmus-server-graphql-server.chartserviceversion.yaml
+      desc: pod-cpu-hog-chaos-center-litmus-server-graphql-server
+    - name: pod-cpu-hog-chaos-center-litmus-server-auth-server
+      CSV: pod-cpu-hog-chaos-center-litmus-server-auth-server.chartserviceversion.yaml
+      desc: pod-cpu-hog-chaos-center-litmus-server-auth-server
+    - name: pod-cpu-hog-chaos-exporter-chaos-exporter
+      CSV: pod-cpu-hog-chaos-exporter-chaos-exporter.chartserviceversion.yaml
+      desc: pod-cpu-hog-chaos-exporter-chaos-exporter
+    - name: pod-cpu-hog-chaos-operator-ce-chaos-operator
+      CSV: pod-cpu-hog-chaos-operator-ce-chaos-operator.chartserviceversion.yaml
+      desc: pod-cpu-hog-chaos-operator-ce-chaos-operator
+    - name: pod-cpu-hog-event-tracker-litmus-event-tracker
+      CSV: pod-cpu-hog-event-tracker-litmus-event-tracker.chartserviceversion.yaml
+      desc: pod-cpu-hog-event-tracker-litmus-event-tracker
+    - name: pod-cpu-hog-subscriber-subscriber
+      CSV: pod-cpu-hog-subscriber-subscriber.chartserviceversion.yaml
+      desc: pod-cpu-hog-subscriber-subscriber
+    - name: pod-cpu-hog-workflow-controller-workflow-controller
+      CSV: pod-cpu-hog-workflow-controller-workflow-controller.chartserviceversion.yaml
+      desc: pod-cpu-hog-workflow-controller-workflow-controller
+    - name: pod-mem-hog-chaos-center-litmus-mongo-mongo
+      CSV: pod-mem-hog-chaos-center-litmus-mongo-mongo.chartserviceversion.yaml
+      desc: pod-mem-hog-chaos-center-litmus-mongo-mongo
+    - name: pod-mem-hog-chaos-center-litmus-frontend-litmusportal-frontend
+      CSV: pod-mem-hog-chaos-center-litmus-frontend-litmusportal-frontend.chartserviceversion.yaml
+      desc: pod-mem-hog-chaos-center-litmus-frontend-litmusportal-frontend
+    - name: pod-mem-hog-chaos-center-litmus-server-graphql-server
+      CSV: pod-mem-hog-chaos-center-litmus-server-graphql-server.chartserviceversion.yaml
+      desc: pod-mem-hog-chaos-center-litmus-server-graphql-server
+    - name: pod-mem-hog-chaos-center-litmus-server-auth-server
+      CSV: pod-mem-hog-chaos-center-litmus-server-auth-server.chartserviceversion.yaml
+      desc: pod-mem-hog-chaos-center-litmus-server-auth-server
+    - name: pod-mem-hog-chaos-exporter-chaos-exporter
+      CSV: pod-mem-hog-chaos-exporter-chaos-exporter.chartserviceversion.yaml
+      desc: pod-mem-hog-chaos-exporter-chaos-exporter
+    - name: pod-mem-hog-chaos-operator-ce-chaos-operator
+      CSV: pod-mem-hog-chaos-operator-ce-chaos-operator.chartserviceversion.yaml
+      desc: pod-mem-hog-chaos-operator-ce-chaos-operator
+    - name: pod-mem-hog-event-tracker-litmus-event-tracker
+      CSV: pod-mem-hog-event-tracker-litmus-event-tracker.chartserviceversion.yaml
+      desc: pod-mem-hog-event-tracker-litmus-event-tracker
+    - name: pod-mem-hog-subscriber-subscriber
+      CSV: pod-mem-hog-subscriber-subscriber.chartserviceversion.yaml
+      desc: pod-mem-hog-subscriber-subscriber
+    - name: pod-mem-hog-workflow-controller-workflow-controller
+      CSV: pod-mem-hog-workflow-controller-workflow-controller.chartserviceversion.yaml
+      desc: pod-mem-hog-workflow-controller-workflow-controller
+    - name: pod-io-stress-chaos-center-litmus-mongo-mongo
+      CSV: pod-io-stress-chaos-center-litmus-mongo-mongo.chartserviceversion.yaml
+      desc: pod-io-stress-chaos-center-litmus-mongo-mongo
+    - name: pod-io-stress-chaos-center-litmus-frontend-litmusportal-frontend
+      CSV: pod-io-stress-chaos-center-litmus-frontend-litmusportal-frontend.chartserviceversion.yaml
+      desc: pod-io-stress-chaos-center-litmus-frontend-litmusportal-frontend
+    - name: pod-io-stress-chaos-center-litmus-server-graphql-server
+      CSV: pod-io-stress-chaos-center-litmus-server-graphql-server.chartserviceversion.yaml
+      desc: pod-io-stress-chaos-center-litmus-server-graphql-server
+    - name: pod-io-stress-chaos-center-litmus-server-auth-server
+      CSV: pod-io-stress-chaos-center-litmus-server-auth-server.chartserviceversion.yaml
+      desc: pod-io-stress-chaos-center-litmus-server-auth-server
+    - name: pod-io-stress-chaos-exporter-chaos-exporter
+      CSV: pod-io-stress-chaos-exporter-chaos-exporter.chartserviceversion.yaml
+      desc: pod-io-stress-chaos-exporter-chaos-exporter
+    - name: pod-io-stress-chaos-operator-ce-chaos-operator
+      CSV: pod-io-stress-chaos-operator-ce-chaos-operator.chartserviceversion.yaml
+      desc: pod-io-stress-chaos-operator-ce-chaos-operator
+    - name: pod-io-stress-event-tracker-litmus-event-tracker
+      CSV: pod-io-stress-event-tracker-litmus-event-tracker.chartserviceversion.yaml
+      desc: pod-io-stress-event-tracker-litmus-event-tracker
+    - name: pod-io-stress-subscriber-subscriber
+      CSV: pod-io-stress-subscriber-subscriber.chartserviceversion.yaml
+      desc: pod-io-stress-subscriber-subscriber
+    - name: pod-io-stress-workflow-controller-workflow-controller
+      CSV: pod-io-stress-workflow-controller-workflow-controller.chartserviceversion.yaml
+      desc: pod-io-stress-workflow-controller-workflow-controller
+    - name: pod-network-corruption-chaos-center-litmus-mongo-mongo
+      CSV: pod-network-corruption-chaos-center-litmus-mongo-mongo.chartserviceversion.yaml
+      desc: pod-network-corruption-chaos-center-litmus-mongo-mongo
+    - name: pod-network-corruption-chaos-center-litmus-frontend-litmusportal-frontend
+      CSV: pod-network-corruption-chaos-center-litmus-frontend-litmusportal-frontend.chartserviceversion.yaml
+      desc: pod-network-corruption-chaos-center-litmus-frontend-litmusportal-frontend
+    - name: pod-network-corruption-chaos-center-litmus-server-graphql-server
+      CSV: pod-network-corruption-chaos-center-litmus-server-graphql-server.chartserviceversion.yaml
+      desc: pod-network-corruption-chaos-center-litmus-server-graphql-server
+    - name: pod-network-corruption-chaos-center-litmus-server-auth-server
+      CSV: pod-network-corruption-chaos-center-litmus-server-auth-server.chartserviceversion.yaml
+      desc: pod-network-corruption-chaos-center-litmus-server-auth-server
+    - name: pod-network-corruption-chaos-exporter-chaos-exporter
+      CSV: pod-network-corruption-chaos-exporter-chaos-exporter.chartserviceversion.yaml
+      desc: pod-network-corruption-chaos-exporter-chaos-exporter
+    - name: pod-network-corruption-chaos-operator-ce-chaos-operator
+      CSV: pod-network-corruption-chaos-operator-ce-chaos-operator.chartserviceversion.yaml
+      desc: pod-network-corruption-chaos-operator-ce-chaos-operator
+    - name: pod-network-corruption-event-tracker-litmus-event-tracker
+      CSV: pod-network-corruption-event-tracker-litmus-event-tracker.chartserviceversion.yaml
+      desc: pod-network-corruption-event-tracker-litmus-event-tracker
+    - name: pod-network-corruption-subscriber-subscriber
+      CSV: pod-network-corruption-subscriber-subscriber.chartserviceversion.yaml
+      desc: pod-network-corruption-subscriber-subscriber
+    - name: pod-network-corruption-workflow-controller-workflow-controller
+      CSV: pod-network-corruption-workflow-controller-workflow-controller.chartserviceversion.yaml
+      desc: pod-network-corruption-workflow-controller-workflow-controller
+    - name: pod-network-duplication-chaos-center-litmus-mongo-mongo
+      CSV: pod-network-duplication-chaos-center-litmus-mongo-mongo.chartserviceversion.yaml
+      desc: pod-network-duplication-chaos-center-litmus-mongo-mongo
+    - name: pod-network-duplication-chaos-center-litmus-frontend-litmusportal-frontend
+      CSV: pod-network-duplication-chaos-center-litmus-frontend-litmusportal-frontend.chartserviceversion.yaml
+      desc: pod-network-duplication-chaos-center-litmus-frontend-litmusportal-frontend
+    - name: pod-network-duplication-chaos-center-litmus-server-graphql-server
+      CSV: pod-network-duplication-chaos-center-litmus-server-graphql-server.chartserviceversion.yaml
+      desc: pod-network-duplication-chaos-center-litmus-server-graphql-server
+    - name: pod-network-duplication-chaos-center-litmus-server-auth-server
+      CSV: pod-network-duplication-chaos-center-litmus-server-auth-server.chartserviceversion.yaml
+      desc: pod-network-duplication-chaos-center-litmus-server-auth-server
+    - name: pod-network-duplication-chaos-exporter-chaos-exporter
+      CSV: pod-network-duplication-chaos-exporter-chaos-exporter.chartserviceversion.yaml
+      desc: pod-network-duplication-chaos-exporter-chaos-exporter
+    - name: pod-network-duplication-chaos-operator-ce-chaos-operator
+      CSV: pod-network-duplication-chaos-operator-ce-chaos-operator.chartserviceversion.yaml
+      desc: pod-network-duplication-chaos-operator-ce-chaos-operator
+    - name: pod-network-duplication-event-tracker-litmus-event-tracker
+      CSV: pod-network-duplication-event-tracker-litmus-event-tracker.chartserviceversion.yaml
+      desc: pod-network-duplication-event-tracker-litmus-event-tracker
+    - name: pod-network-duplication-subscriber-subscriber
+      CSV: pod-network-duplication-subscriber-subscriber.chartserviceversion.yaml
+      desc: pod-network-duplication-subscriber-subscriber
+    - name: pod-network-duplication-workflow-controller-workflow-controller
+      CSV: pod-network-duplication-workflow-controller-workflow-controller.chartserviceversion.yaml
+      desc: pod-network-duplication-workflow-controller-workflow-controller
+    - name: pod-network-loss-chaos-center-litmus-mongo-mongo
+      CSV: pod-network-loss-chaos-center-litmus-mongo-mongo.chartserviceversion.yaml
+      desc: pod-network-loss-chaos-center-litmus-mongo-mongo
+    - name: pod-network-loss-chaos-center-litmus-frontend-litmusportal-frontend
+      CSV: pod-network-loss-chaos-center-litmus-frontend-litmusportal-frontend.chartserviceversion.yaml
+      desc: pod-network-loss-chaos-center-litmus-frontend-litmusportal-frontend
+    - name: pod-network-loss-chaos-center-litmus-server-graphql-server
+      CSV: pod-network-loss-chaos-center-litmus-server-graphql-server.chartserviceversion.yaml
+      desc: pod-network-loss-chaos-center-litmus-server-graphql-server
+    - name: pod-network-loss-chaos-center-litmus-server-auth-server
+      CSV: pod-network-loss-chaos-center-litmus-server-auth-server.chartserviceversion.yaml
+      desc: pod-network-loss-chaos-center-litmus-server-auth-server
+    - name: pod-network-loss-chaos-exporter-chaos-exporter
+      CSV: pod-network-loss-chaos-exporter-chaos-exporter.chartserviceversion.yaml
+      desc: pod-network-loss-chaos-exporter-chaos-exporter
+    - name: pod-network-loss-chaos-operator-ce-chaos-operator
+      CSV: pod-network-loss-chaos-operator-ce-chaos-operator.chartserviceversion.yaml
+      desc: pod-network-loss-chaos-operator-ce-chaos-operator
+    - name: pod-network-loss-event-tracker-litmus-event-tracker
+      CSV: pod-network-loss-event-tracker-litmus-event-tracker.chartserviceversion.yaml
+      desc: pod-network-loss-event-tracker-litmus-event-tracker
+    - name: pod-network-loss-subscriber-subscriber
+      CSV: pod-network-loss-subscriber-subscriber.chartserviceversion.yaml
+      desc: pod-network-loss-subscriber-subscriber
+    - name: pod-network-loss-workflow-controller-workflow-controller
+      CSV: pod-network-loss-workflow-controller-workflow-controller.chartserviceversion.yaml
+      desc: pod-network-loss-workflow-controller-workflow-controller
+    - name: pod-network-latency-chaos-center-litmus-mongo-mongo
+      CSV: pod-network-latency-chaos-center-litmus-mongo-mongo.chartserviceversion.yaml
+      desc: pod-network-latency-chaos-center-litmus-mongo-mongo
+    - name: pod-network-latency-chaos-center-litmus-frontend-litmusportal-frontend
+      CSV: pod-network-latency-chaos-center-litmus-frontend-litmusportal-frontend.chartserviceversion.yaml
+      desc: pod-network-latency-chaos-center-litmus-frontend-litmusportal-frontend
+    - name: pod-network-latency-chaos-center-litmus-server-graphql-server
+      CSV: pod-network-latency-chaos-center-litmus-server-graphql-server.chartserviceversion.yaml
+      desc: pod-network-latency-chaos-center-litmus-server-graphql-server
+    - name: pod-network-latency-chaos-center-litmus-server-auth-server
+      CSV: pod-network-latency-chaos-center-litmus-server-auth-server.chartserviceversion.yaml
+      desc: pod-network-latency-chaos-center-litmus-server-auth-server
+    - name: pod-network-latency-chaos-exporter-chaos-exporter
+      CSV: pod-network-latency-chaos-exporter-chaos-exporter.chartserviceversion.yaml
+      desc: pod-network-latency-chaos-exporter-chaos-exporter
+    - name: pod-network-latency-chaos-operator-ce-chaos-operator
+      CSV: pod-network-latency-chaos-operator-ce-chaos-operator.chartserviceversion.yaml
+      desc: pod-network-latency-chaos-operator-ce-chaos-operator
+    - name: pod-network-latency-event-tracker-litmus-event-tracker
+      CSV: pod-network-latency-event-tracker-litmus-event-tracker.chartserviceversion.yaml
+      desc: pod-network-latency-event-tracker-litmus-event-tracker
+    - name: pod-network-latency-subscriber-subscriber
+      CSV: pod-network-latency-subscriber-subscriber.chartserviceversion.yaml
+      desc: pod-network-latency-subscriber-subscriber
+    - name: pod-network-latency-workflow-controller-workflow-controller
+      CSV: pod-network-latency-workflow-controller-workflow-controller.chartserviceversion.yaml
+      desc: pod-network-latency-workflow-controller-workflow-controller

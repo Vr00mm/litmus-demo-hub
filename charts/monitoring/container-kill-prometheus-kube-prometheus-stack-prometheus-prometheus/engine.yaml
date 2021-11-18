@@ -1,0 +1,29 @@
+apiVersion: litmuschaos.io/v1alpha1
+kind: ChaosEngine
+metadata:
+    name: nginx-chaos
+    namespace: default
+spec:
+    engineState: active
+    appinfo:
+        appns: monitoring
+        applabel: operator.prometheus.io/shard=0
+        appkind: statefulset
+    chaosServiceAccount: container-kill-sa
+    experiments:
+        - name: container-kill
+          spec:
+            components:
+                env:
+                    - name: TOTAL_CHAOS_DURATION
+                      value: "20"
+                    - name: CHAOS_INTERVAL
+                      value: "10"
+                    - name: CONTAINER_RUNTIME
+                      value: docker
+                    - name: SOCKET_PATH
+                      value: /var/run/docker.sock
+                    - name: PODS_AFFECTED_PERC
+                      value: ""
+                    - name: TARGET_CONTAINER
+                      value: ""
