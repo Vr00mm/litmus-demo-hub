@@ -54,7 +54,7 @@ spec:
       - /bin/bash
     env:
       - name: TARGET_CONTAINER
-        value: "podtato-main-hats"
+        value: "server"
       - name: RAMP_TIME
         value: ""
       - name: LIB
