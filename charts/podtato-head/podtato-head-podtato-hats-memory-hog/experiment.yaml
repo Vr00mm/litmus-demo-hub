@@ -64,7 +64,7 @@ spec:
       - name: LIB
         value: "litmus"
       - name: CHAOS_KILL_COMMAND
-        value: "kill $(find /proc -name exe -lname '*/dd' 2>&1 | grep -v 'Permission denied' | awk -F/ '{print $(NF-1)}' | head -n 1)"
+        value: "killall dd"
       - name: TARGET_PODS
         value: ""
       - name: SEQUENCE
