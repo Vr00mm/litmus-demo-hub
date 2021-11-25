@@ -2,43 +2,7 @@
 
 ## Exercices de chaos pour le cluster minikube dans le namespace litmus
 
- ### Exercices pour le composant deployment/chaos-center-litmus-frontend
-
-| Exercice | Container | Lien | Commentaire
-| ------ | ------ | ------ | ------ |
-| [container-kill](documentation/experiments/container-kill.md) | litmusportal-frontend | [documentation/experiments/clusters/minikube/litmus/container-kill-chaos-center-litmus-frontend-litmusportal-frontend.md](PlDb) | |
-| [pod-delete](documentation/experiments/pod-delete.md) | litmusportal-frontend | [documentation/experiments/clusters/minikube/litmus/pod-delete-chaos-center-litmus-frontend.md](PlDb) | |
-| [pod-cpu-hog](documentation/experiments/pod-cpu-hog.md) | litmusportal-frontend | [documentation/experiments/clusters/minikube/litmus/pod-cpu-hog-chaos-center-litmus-frontend-litmusportal-frontend.md](PlDb) | |
-| [pod-mem-hog](documentation/experiments/pod-mem-hog.md) | litmusportal-frontend | [documentation/experiments/clusters/minikube/litmus/pod-mem-hog-chaos-center-litmus-frontend-litmusportal-frontend.md](PlDb) | |
-| [pod-io-stress](documentation/experiments/pod-io-stress.md) | litmusportal-frontend | [documentation/experiments/clusters/minikube/litmus/pod-io-stress-chaos-center-litmus-frontend-litmusportal-frontend.md](PlDb) | |
-| [pod-network-corruption](documentation/experiments/pod-network-corruption.md) | litmusportal-frontend | [documentation/experiments/clusters/minikube/litmus/pod-network-corruption-chaos-center-litmus-frontend-litmusportal-frontend.md](PlDb) | |
-| [pod-network-duplication](documentation/experiments/pod-network-duplication.md) | litmusportal-frontend | [documentation/experiments/clusters/minikube/litmus/pod-network-duplication-chaos-center-litmus-frontend-litmusportal-frontend.md](PlDb) | |
-| [pod-network-loss](documentation/experiments/pod-network-loss.md) | litmusportal-frontend | [documentation/experiments/clusters/minikube/litmus/pod-network-loss-chaos-center-litmus-frontend-litmusportal-frontend.md](PlDb) | |
-| [pod-network-latency](documentation/experiments/pod-network-latency.md) | litmusportal-frontend | [documentation/experiments/clusters/minikube/litmus/pod-network-latency-chaos-center-litmus-frontend-litmusportal-frontend.md](PlDb) | |
-
-### Exercices pour le composant deployment/chaos-center-litmus-server
-
-| Exercice | Container | Lien | Commentaire
-| ------ | ------ | ------ | ------ |
-| [container-kill](documentation/experiments/container-kill.md) | graphql-server | [documentation/experiments/clusters/minikube/litmus/container-kill-chaos-center-litmus-server-graphql-server.md](PlDb) | |
-| [container-kill](documentation/experiments/container-kill.md) | auth-server | [documentation/experiments/clusters/minikube/litmus/container-kill-chaos-center-litmus-server-auth-server.md](PlDb) | |
-| [pod-delete](documentation/experiments/pod-delete.md) | graphql-server, auth-server | [documentation/experiments/clusters/minikube/litmus/pod-delete-chaos-center-litmus-server.md](PlDb) | |
-| [pod-cpu-hog](documentation/experiments/pod-cpu-hog.md) | graphql-server | [documentation/experiments/clusters/minikube/litmus/pod-cpu-hog-chaos-center-litmus-server-graphql-server.md](PlDb) | |
-| [pod-cpu-hog](documentation/experiments/pod-cpu-hog.md) | auth-server | [documentation/experiments/clusters/minikube/litmus/pod-cpu-hog-chaos-center-litmus-server-auth-server.md](PlDb) | |
-| [pod-mem-hog](documentation/experiments/pod-mem-hog.md) | graphql-server | [documentation/experiments/clusters/minikube/litmus/pod-mem-hog-chaos-center-litmus-server-graphql-server.md](PlDb) | |
-| [pod-mem-hog](documentation/experiments/pod-mem-hog.md) | auth-server | [documentation/experiments/clusters/minikube/litmus/pod-mem-hog-chaos-center-litmus-server-auth-server.md](PlDb) | |
-| [pod-io-stress](documentation/experiments/pod-io-stress.md) | graphql-server | [documentation/experiments/clusters/minikube/litmus/pod-io-stress-chaos-center-litmus-server-graphql-server.md](PlDb) | |
-| [pod-io-stress](documentation/experiments/pod-io-stress.md) | auth-server | [documentation/experiments/clusters/minikube/litmus/pod-io-stress-chaos-center-litmus-server-auth-server.md](PlDb) | |
-| [pod-network-corruption](documentation/experiments/pod-network-corruption.md) | graphql-server | [documentation/experiments/clusters/minikube/litmus/pod-network-corruption-chaos-center-litmus-server-graphql-server.md](PlDb) | |
-| [pod-network-corruption](documentation/experiments/pod-network-corruption.md) | auth-server | [documentation/experiments/clusters/minikube/litmus/pod-network-corruption-chaos-center-litmus-server-auth-server.md](PlDb) | |
-| [pod-network-duplication](documentation/experiments/pod-network-duplication.md) | graphql-server | [documentation/experiments/clusters/minikube/litmus/pod-network-duplication-chaos-center-litmus-server-graphql-server.md](PlDb) | |
-| [pod-network-duplication](documentation/experiments/pod-network-duplication.md) | auth-server | [documentation/experiments/clusters/minikube/litmus/pod-network-duplication-chaos-center-litmus-server-auth-server.md](PlDb) | |
-| [pod-network-loss](documentation/experiments/pod-network-loss.md) | graphql-server | [documentation/experiments/clusters/minikube/litmus/pod-network-loss-chaos-center-litmus-server-graphql-server.md](PlDb) | |
-| [pod-network-loss](documentation/experiments/pod-network-loss.md) | auth-server | [documentation/experiments/clusters/minikube/litmus/pod-network-loss-chaos-center-litmus-server-auth-server.md](PlDb) | |
-| [pod-network-latency](documentation/experiments/pod-network-latency.md) | graphql-server | [documentation/experiments/clusters/minikube/litmus/pod-network-latency-chaos-center-litmus-server-graphql-server.md](PlDb) | |
-| [pod-network-latency](documentation/experiments/pod-network-latency.md) | auth-server | [documentation/experiments/clusters/minikube/litmus/pod-network-latency-chaos-center-litmus-server-auth-server.md](PlDb) | |
-
-### Exercices pour le composant deployment/chaos-exporter
+ ### Exercices pour le composant deployment/chaos-exporter
 
 | Exercice | Container | Lien | Commentaire
 | ------ | ------ | ------ | ------ |
@@ -80,6 +44,42 @@
 | [pod-network-loss](documentation/experiments/pod-network-loss.md) | litmus-event-tracker | [documentation/experiments/clusters/minikube/litmus/pod-network-loss-event-tracker-litmus-event-tracker.md](PlDb) | |
 | [pod-network-latency](documentation/experiments/pod-network-latency.md) | litmus-event-tracker | [documentation/experiments/clusters/minikube/litmus/pod-network-latency-event-tracker-litmus-event-tracker.md](PlDb) | |
 
+### Exercices pour le composant deployment/litmusportal-frontend
+
+| Exercice | Container | Lien | Commentaire
+| ------ | ------ | ------ | ------ |
+| [container-kill](documentation/experiments/container-kill.md) | litmusportal-frontend | [documentation/experiments/clusters/minikube/litmus/container-kill-litmusportal-frontend-litmusportal-frontend.md](PlDb) | |
+| [pod-delete](documentation/experiments/pod-delete.md) | litmusportal-frontend | [documentation/experiments/clusters/minikube/litmus/pod-delete-litmusportal-frontend.md](PlDb) | |
+| [pod-cpu-hog](documentation/experiments/pod-cpu-hog.md) | litmusportal-frontend | [documentation/experiments/clusters/minikube/litmus/pod-cpu-hog-litmusportal-frontend-litmusportal-frontend.md](PlDb) | |
+| [pod-mem-hog](documentation/experiments/pod-mem-hog.md) | litmusportal-frontend | [documentation/experiments/clusters/minikube/litmus/pod-mem-hog-litmusportal-frontend-litmusportal-frontend.md](PlDb) | |
+| [pod-io-stress](documentation/experiments/pod-io-stress.md) | litmusportal-frontend | [documentation/experiments/clusters/minikube/litmus/pod-io-stress-litmusportal-frontend-litmusportal-frontend.md](PlDb) | |
+| [pod-network-corruption](documentation/experiments/pod-network-corruption.md) | litmusportal-frontend | [documentation/experiments/clusters/minikube/litmus/pod-network-corruption-litmusportal-frontend-litmusportal-frontend.md](PlDb) | |
+| [pod-network-duplication](documentation/experiments/pod-network-duplication.md) | litmusportal-frontend | [documentation/experiments/clusters/minikube/litmus/pod-network-duplication-litmusportal-frontend-litmusportal-frontend.md](PlDb) | |
+| [pod-network-loss](documentation/experiments/pod-network-loss.md) | litmusportal-frontend | [documentation/experiments/clusters/minikube/litmus/pod-network-loss-litmusportal-frontend-litmusportal-frontend.md](PlDb) | |
+| [pod-network-latency](documentation/experiments/pod-network-latency.md) | litmusportal-frontend | [documentation/experiments/clusters/minikube/litmus/pod-network-latency-litmusportal-frontend-litmusportal-frontend.md](PlDb) | |
+
+### Exercices pour le composant deployment/litmusportal-server
+
+| Exercice | Container | Lien | Commentaire
+| ------ | ------ | ------ | ------ |
+| [container-kill](documentation/experiments/container-kill.md) | graphql-server | [documentation/experiments/clusters/minikube/litmus/container-kill-litmusportal-server-graphql-server.md](PlDb) | |
+| [container-kill](documentation/experiments/container-kill.md) | auth-server | [documentation/experiments/clusters/minikube/litmus/container-kill-litmusportal-server-auth-server.md](PlDb) | |
+| [pod-delete](documentation/experiments/pod-delete.md) | graphql-server, auth-server | [documentation/experiments/clusters/minikube/litmus/pod-delete-litmusportal-server.md](PlDb) | |
+| [pod-cpu-hog](documentation/experiments/pod-cpu-hog.md) | graphql-server | [documentation/experiments/clusters/minikube/litmus/pod-cpu-hog-litmusportal-server-graphql-server.md](PlDb) | |
+| [pod-cpu-hog](documentation/experiments/pod-cpu-hog.md) | auth-server | [documentation/experiments/clusters/minikube/litmus/pod-cpu-hog-litmusportal-server-auth-server.md](PlDb) | |
+| [pod-mem-hog](documentation/experiments/pod-mem-hog.md) | graphql-server | [documentation/experiments/clusters/minikube/litmus/pod-mem-hog-litmusportal-server-graphql-server.md](PlDb) | |
+| [pod-mem-hog](documentation/experiments/pod-mem-hog.md) | auth-server | [documentation/experiments/clusters/minikube/litmus/pod-mem-hog-litmusportal-server-auth-server.md](PlDb) | |
+| [pod-io-stress](documentation/experiments/pod-io-stress.md) | graphql-server | [documentation/experiments/clusters/minikube/litmus/pod-io-stress-litmusportal-server-graphql-server.md](PlDb) | |
+| [pod-io-stress](documentation/experiments/pod-io-stress.md) | auth-server | [documentation/experiments/clusters/minikube/litmus/pod-io-stress-litmusportal-server-auth-server.md](PlDb) | |
+| [pod-network-corruption](documentation/experiments/pod-network-corruption.md) | graphql-server | [documentation/experiments/clusters/minikube/litmus/pod-network-corruption-litmusportal-server-graphql-server.md](PlDb) | |
+| [pod-network-corruption](documentation/experiments/pod-network-corruption.md) | auth-server | [documentation/experiments/clusters/minikube/litmus/pod-network-corruption-litmusportal-server-auth-server.md](PlDb) | |
+| [pod-network-duplication](documentation/experiments/pod-network-duplication.md) | graphql-server | [documentation/experiments/clusters/minikube/litmus/pod-network-duplication-litmusportal-server-graphql-server.md](PlDb) | |
+| [pod-network-duplication](documentation/experiments/pod-network-duplication.md) | auth-server | [documentation/experiments/clusters/minikube/litmus/pod-network-duplication-litmusportal-server-auth-server.md](PlDb) | |
+| [pod-network-loss](documentation/experiments/pod-network-loss.md) | graphql-server | [documentation/experiments/clusters/minikube/litmus/pod-network-loss-litmusportal-server-graphql-server.md](PlDb) | |
+| [pod-network-loss](documentation/experiments/pod-network-loss.md) | auth-server | [documentation/experiments/clusters/minikube/litmus/pod-network-loss-litmusportal-server-auth-server.md](PlDb) | |
+| [pod-network-latency](documentation/experiments/pod-network-latency.md) | graphql-server | [documentation/experiments/clusters/minikube/litmus/pod-network-latency-litmusportal-server-graphql-server.md](PlDb) | |
+| [pod-network-latency](documentation/experiments/pod-network-latency.md) | auth-server | [documentation/experiments/clusters/minikube/litmus/pod-network-latency-litmusportal-server-auth-server.md](PlDb) | |
+
 ### Exercices pour le composant deployment/subscriber
 
 | Exercice | Container | Lien | Commentaire
@@ -108,17 +108,17 @@
 | [pod-network-loss](documentation/experiments/pod-network-loss.md) | workflow-controller | [documentation/experiments/clusters/minikube/litmus/pod-network-loss-workflow-controller-workflow-controller.md](PlDb) | |
 | [pod-network-latency](documentation/experiments/pod-network-latency.md) | workflow-controller | [documentation/experiments/clusters/minikube/litmus/pod-network-latency-workflow-controller-workflow-controller.md](PlDb) | |
 
-### Exercices pour le composant statefulset/chaos-center-litmus-mongo
+### Exercices pour le composant statefulset/litmusportal-mongo
 
 | Exercice | Container | Lien | Commentaire
 | ------ | ------ | ------ | ------ |
-| [container-kill](documentation/experiments/container-kill.md) | mongo | [documentation/experiments/clusters/minikube/litmus/container-kill-chaos-center-litmus-mongo-mongo.md](PlDb) | |
-| [pod-delete](documentation/experiments/pod-delete.md) | mongo | [documentation/experiments/clusters/minikube/litmus/pod-delete-chaos-center-litmus-mongo.md](PlDb) | |
-| [pod-cpu-hog](documentation/experiments/pod-cpu-hog.md) | mongo | [documentation/experiments/clusters/minikube/litmus/pod-cpu-hog-chaos-center-litmus-mongo-mongo.md](PlDb) | |
-| [pod-mem-hog](documentation/experiments/pod-mem-hog.md) | mongo | [documentation/experiments/clusters/minikube/litmus/pod-mem-hog-chaos-center-litmus-mongo-mongo.md](PlDb) | |
-| [pod-io-stress](documentation/experiments/pod-io-stress.md) | mongo | [documentation/experiments/clusters/minikube/litmus/pod-io-stress-chaos-center-litmus-mongo-mongo.md](PlDb) | |
-| [pod-network-corruption](documentation/experiments/pod-network-corruption.md) | mongo | [documentation/experiments/clusters/minikube/litmus/pod-network-corruption-chaos-center-litmus-mongo-mongo.md](PlDb) | |
-| [pod-network-duplication](documentation/experiments/pod-network-duplication.md) | mongo | [documentation/experiments/clusters/minikube/litmus/pod-network-duplication-chaos-center-litmus-mongo-mongo.md](PlDb) | |
-| [pod-network-loss](documentation/experiments/pod-network-loss.md) | mongo | [documentation/experiments/clusters/minikube/litmus/pod-network-loss-chaos-center-litmus-mongo-mongo.md](PlDb) | |
-| [pod-network-latency](documentation/experiments/pod-network-latency.md) | mongo | [documentation/experiments/clusters/minikube/litmus/pod-network-latency-chaos-center-litmus-mongo-mongo.md](PlDb) | |
+| [container-kill](documentation/experiments/container-kill.md) | mongo | [documentation/experiments/clusters/minikube/litmus/container-kill-litmusportal-mongo-mongo.md](PlDb) | |
+| [pod-delete](documentation/experiments/pod-delete.md) | mongo | [documentation/experiments/clusters/minikube/litmus/pod-delete-litmusportal-mongo.md](PlDb) | |
+| [pod-cpu-hog](documentation/experiments/pod-cpu-hog.md) | mongo | [documentation/experiments/clusters/minikube/litmus/pod-cpu-hog-litmusportal-mongo-mongo.md](PlDb) | |
+| [pod-mem-hog](documentation/experiments/pod-mem-hog.md) | mongo | [documentation/experiments/clusters/minikube/litmus/pod-mem-hog-litmusportal-mongo-mongo.md](PlDb) | |
+| [pod-io-stress](documentation/experiments/pod-io-stress.md) | mongo | [documentation/experiments/clusters/minikube/litmus/pod-io-stress-litmusportal-mongo-mongo.md](PlDb) | |
+| [pod-network-corruption](documentation/experiments/pod-network-corruption.md) | mongo | [documentation/experiments/clusters/minikube/litmus/pod-network-corruption-litmusportal-mongo-mongo.md](PlDb) | |
+| [pod-network-duplication](documentation/experiments/pod-network-duplication.md) | mongo | [documentation/experiments/clusters/minikube/litmus/pod-network-duplication-litmusportal-mongo-mongo.md](PlDb) | |
+| [pod-network-loss](documentation/experiments/pod-network-loss.md) | mongo | [documentation/experiments/clusters/minikube/litmus/pod-network-loss-litmusportal-mongo-mongo.md](PlDb) | |
+| [pod-network-latency](documentation/experiments/pod-network-latency.md) | mongo | [documentation/experiments/clusters/minikube/litmus/pod-network-latency-litmusportal-mongo-mongo.md](PlDb) | |
 

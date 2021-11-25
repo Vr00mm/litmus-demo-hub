@@ -1,0 +1,13 @@
+apiVersion: ""
+kind: ""
+metadata:
+    name: ""
+    namespace: ""
+spec:
+    engineState: ""
+    appinfo:
+        appns: oidc-provider
+        applabel: app.kubernetes.io/instance=oidc-dex
+        appkind: deployment
+    chaosServiceAccount: ""
+    experiments: []

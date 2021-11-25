@@ -1,14 +1,164 @@
-packageName: podtato-head
+packageName: minikube-podtato-head
 experiments:
-  - name: podtato-head-podtato-hats-container-kill
-    CSV: podtato-head-podtato-hats-container-kill.chartserviceversion.yaml
-    desc: "podtato-head-podtato-hats-container-kill"
-  - name: podtato-head-podtato-hats-cpu-hog
-    CSV: podtato-head-podtato-hats-cpu-hog.chartserviceversion.yaml
-    desc: "podtato-head-podtato-hats-cpu-hog"
-  - name: podtato-head-podtato-hats-memory-hog
-    CSV: podtato-head-podtato-hats-memory-hog.chartserviceversion.yaml
-    desc: "podtato-head-podtato-hats-memory-hog"
-  - name: podtato-head-podtato-hats-net-loss
-    CSV: podtato-head-podtato-hats-net-loss.chartserviceversion.yaml
-    desc: "podtato-head-podtato-hats-net-loss"
+    - name: container-kill-podtato-hats-podtato-head-hats
+      CSV: container-kill-podtato-hats-podtato-head-hats.chartserviceversion.yaml
+      desc: container-kill-podtato-hats-podtato-head-hats
+    - name: container-kill-podtato-left-arm-podtato-head-left-arm
+      CSV: container-kill-podtato-left-arm-podtato-head-left-arm.chartserviceversion.yaml
+      desc: container-kill-podtato-left-arm-podtato-head-left-arm
+    - name: container-kill-podtato-left-leg-podtato-head-left-leg
+      CSV: container-kill-podtato-left-leg-podtato-head-left-leg.chartserviceversion.yaml
+      desc: container-kill-podtato-left-leg-podtato-head-left-leg
+    - name: container-kill-podtato-main-podtato-head-main
+      CSV: container-kill-podtato-main-podtato-head-main.chartserviceversion.yaml
+      desc: container-kill-podtato-main-podtato-head-main
+    - name: container-kill-podtato-right-arm-podtato-head-right-arm
+      CSV: container-kill-podtato-right-arm-podtato-head-right-arm.chartserviceversion.yaml
+      desc: container-kill-podtato-right-arm-podtato-head-right-arm
+    - name: container-kill-podtato-right-leg-podtato-head-right-leg
+      CSV: container-kill-podtato-right-leg-podtato-head-right-leg.chartserviceversion.yaml
+      desc: container-kill-podtato-right-leg-podtato-head-right-leg
+    - name: pod-delete-podtato-hats
+      CSV: pod-delete-podtato-hats.chartserviceversion.yaml
+      desc: pod-delete-podtato-hats
+    - name: pod-delete-podtato-left-arm
+      CSV: pod-delete-podtato-left-arm.chartserviceversion.yaml
+      desc: pod-delete-podtato-left-arm
+    - name: pod-delete-podtato-left-leg
+      CSV: pod-delete-podtato-left-leg.chartserviceversion.yaml
+      desc: pod-delete-podtato-left-leg
+    - name: pod-delete-podtato-main
+      CSV: pod-delete-podtato-main.chartserviceversion.yaml
+      desc: pod-delete-podtato-main
+    - name: pod-delete-podtato-right-arm
+      CSV: pod-delete-podtato-right-arm.chartserviceversion.yaml
+      desc: pod-delete-podtato-right-arm
+    - name: pod-delete-podtato-right-leg
+      CSV: pod-delete-podtato-right-leg.chartserviceversion.yaml
+      desc: pod-delete-podtato-right-leg
+    - name: pod-cpu-hog-podtato-hats-podtato-head-hats
+      CSV: pod-cpu-hog-podtato-hats-podtato-head-hats.chartserviceversion.yaml
+      desc: pod-cpu-hog-podtato-hats-podtato-head-hats
+    - name: pod-cpu-hog-podtato-left-arm-podtato-head-left-arm
+      CSV: pod-cpu-hog-podtato-left-arm-podtato-head-left-arm.chartserviceversion.yaml
+      desc: pod-cpu-hog-podtato-left-arm-podtato-head-left-arm
+    - name: pod-cpu-hog-podtato-left-leg-podtato-head-left-leg
+      CSV: pod-cpu-hog-podtato-left-leg-podtato-head-left-leg.chartserviceversion.yaml
+      desc: pod-cpu-hog-podtato-left-leg-podtato-head-left-leg
+    - name: pod-cpu-hog-podtato-main-podtato-head-main
+      CSV: pod-cpu-hog-podtato-main-podtato-head-main.chartserviceversion.yaml
+      desc: pod-cpu-hog-podtato-main-podtato-head-main
+    - name: pod-cpu-hog-podtato-right-arm-podtato-head-right-arm
+      CSV: pod-cpu-hog-podtato-right-arm-podtato-head-right-arm.chartserviceversion.yaml
+      desc: pod-cpu-hog-podtato-right-arm-podtato-head-right-arm
+    - name: pod-cpu-hog-podtato-right-leg-podtato-head-right-leg
+      CSV: pod-cpu-hog-podtato-right-leg-podtato-head-right-leg.chartserviceversion.yaml
+      desc: pod-cpu-hog-podtato-right-leg-podtato-head-right-leg
+    - name: pod-mem-hog-podtato-hats-podtato-head-hats
+      CSV: pod-mem-hog-podtato-hats-podtato-head-hats.chartserviceversion.yaml
+      desc: pod-mem-hog-podtato-hats-podtato-head-hats
+    - name: pod-mem-hog-podtato-left-arm-podtato-head-left-arm
+      CSV: pod-mem-hog-podtato-left-arm-podtato-head-left-arm.chartserviceversion.yaml
+      desc: pod-mem-hog-podtato-left-arm-podtato-head-left-arm
+    - name: pod-mem-hog-podtato-left-leg-podtato-head-left-leg
+      CSV: pod-mem-hog-podtato-left-leg-podtato-head-left-leg.chartserviceversion.yaml
+      desc: pod-mem-hog-podtato-left-leg-podtato-head-left-leg
+    - name: pod-mem-hog-podtato-main-podtato-head-main
+      CSV: pod-mem-hog-podtato-main-podtato-head-main.chartserviceversion.yaml
+      desc: pod-mem-hog-podtato-main-podtato-head-main
+    - name: pod-mem-hog-podtato-right-arm-podtato-head-right-arm
+      CSV: pod-mem-hog-podtato-right-arm-podtato-head-right-arm.chartserviceversion.yaml
+      desc: pod-mem-hog-podtato-right-arm-podtato-head-right-arm
+    - name: pod-mem-hog-podtato-right-leg-podtato-head-right-leg
+      CSV: pod-mem-hog-podtato-right-leg-podtato-head-right-leg.chartserviceversion.yaml
+      desc: pod-mem-hog-podtato-right-leg-podtato-head-right-leg
+    - name: pod-io-stress-podtato-hats-podtato-head-hats
+      CSV: pod-io-stress-podtato-hats-podtato-head-hats.chartserviceversion.yaml
+      desc: pod-io-stress-podtato-hats-podtato-head-hats
+    - name: pod-io-stress-podtato-left-arm-podtato-head-left-arm
+      CSV: pod-io-stress-podtato-left-arm-podtato-head-left-arm.chartserviceversion.yaml
+      desc: pod-io-stress-podtato-left-arm-podtato-head-left-arm
+    - name: pod-io-stress-podtato-left-leg-podtato-head-left-leg
+      CSV: pod-io-stress-podtato-left-leg-podtato-head-left-leg.chartserviceversion.yaml
+      desc: pod-io-stress-podtato-left-leg-podtato-head-left-leg
+    - name: pod-io-stress-podtato-main-podtato-head-main
+      CSV: pod-io-stress-podtato-main-podtato-head-main.chartserviceversion.yaml
+      desc: pod-io-stress-podtato-main-podtato-head-main
+    - name: pod-io-stress-podtato-right-arm-podtato-head-right-arm
+      CSV: pod-io-stress-podtato-right-arm-podtato-head-right-arm.chartserviceversion.yaml
+      desc: pod-io-stress-podtato-right-arm-podtato-head-right-arm
+    - name: pod-io-stress-podtato-right-leg-podtato-head-right-leg
+      CSV: pod-io-stress-podtato-right-leg-podtato-head-right-leg.chartserviceversion.yaml
+      desc: pod-io-stress-podtato-right-leg-podtato-head-right-leg
+    - name: pod-network-corruption-podtato-hats-podtato-head-hats
+      CSV: pod-network-corruption-podtato-hats-podtato-head-hats.chartserviceversion.yaml
+      desc: pod-network-corruption-podtato-hats-podtato-head-hats
+    - name: pod-network-corruption-podtato-left-arm-podtato-head-left-arm
+      CSV: pod-network-corruption-podtato-left-arm-podtato-head-left-arm.chartserviceversion.yaml
+      desc: pod-network-corruption-podtato-left-arm-podtato-head-left-arm
+    - name: pod-network-corruption-podtato-left-leg-podtato-head-left-leg
+      CSV: pod-network-corruption-podtato-left-leg-podtato-head-left-leg.chartserviceversion.yaml
+      desc: pod-network-corruption-podtato-left-leg-podtato-head-left-leg
+    - name: pod-network-corruption-podtato-main-podtato-head-main
+      CSV: pod-network-corruption-podtato-main-podtato-head-main.chartserviceversion.yaml
+      desc: pod-network-corruption-podtato-main-podtato-head-main
+    - name: pod-network-corruption-podtato-right-arm-podtato-head-right-arm
+      CSV: pod-network-corruption-podtato-right-arm-podtato-head-right-arm.chartserviceversion.yaml
+      desc: pod-network-corruption-podtato-right-arm-podtato-head-right-arm
+    - name: pod-network-corruption-podtato-right-leg-podtato-head-right-leg
+      CSV: pod-network-corruption-podtato-right-leg-podtato-head-right-leg.chartserviceversion.yaml
+      desc: pod-network-corruption-podtato-right-leg-podtato-head-right-leg
+    - name: pod-network-duplication-podtato-hats-podtato-head-hats
+      CSV: pod-network-duplication-podtato-hats-podtato-head-hats.chartserviceversion.yaml
+      desc: pod-network-duplication-podtato-hats-podtato-head-hats
+    - name: pod-network-duplication-podtato-left-arm-podtato-head-left-arm
+      CSV: pod-network-duplication-podtato-left-arm-podtato-head-left-arm.chartserviceversion.yaml
+      desc: pod-network-duplication-podtato-left-arm-podtato-head-left-arm
+    - name: pod-network-duplication-podtato-left-leg-podtato-head-left-leg
+      CSV: pod-network-duplication-podtato-left-leg-podtato-head-left-leg.chartserviceversion.yaml
+      desc: pod-network-duplication-podtato-left-leg-podtato-head-left-leg
+    - name: pod-network-duplication-podtato-main-podtato-head-main
+      CSV: pod-network-duplication-podtato-main-podtato-head-main.chartserviceversion.yaml
+      desc: pod-network-duplication-podtato-main-podtato-head-main
+    - name: pod-network-duplication-podtato-right-arm-podtato-head-right-arm
+      CSV: pod-network-duplication-podtato-right-arm-podtato-head-right-arm.chartserviceversion.yaml
+      desc: pod-network-duplication-podtato-right-arm-podtato-head-right-arm
+    - name: pod-network-duplication-podtato-right-leg-podtato-head-right-leg
+      CSV: pod-network-duplication-podtato-right-leg-podtato-head-right-leg.chartserviceversion.yaml
+      desc: pod-network-duplication-podtato-right-leg-podtato-head-right-leg
+    - name: pod-network-loss-podtato-hats-podtato-head-hats
+      CSV: pod-network-loss-podtato-hats-podtato-head-hats.chartserviceversion.yaml
+      desc: pod-network-loss-podtato-hats-podtato-head-hats
+    - name: pod-network-loss-podtato-left-arm-podtato-head-left-arm
+      CSV: pod-network-loss-podtato-left-arm-podtato-head-left-arm.chartserviceversion.yaml
+      desc: pod-network-loss-podtato-left-arm-podtato-head-left-arm
+    - name: pod-network-loss-podtato-left-leg-podtato-head-left-leg
+      CSV: pod-network-loss-podtato-left-leg-podtato-head-left-leg.chartserviceversion.yaml
+      desc: pod-network-loss-podtato-left-leg-podtato-head-left-leg
+    - name: pod-network-loss-podtato-main-podtato-head-main
+      CSV: pod-network-loss-podtato-main-podtato-head-main.chartserviceversion.yaml
+      desc: pod-network-loss-podtato-main-podtato-head-main
+    - name: pod-network-loss-podtato-right-arm-podtato-head-right-arm
+      CSV: pod-network-loss-podtato-right-arm-podtato-head-right-arm.chartserviceversion.yaml
+      desc: pod-network-loss-podtato-right-arm-podtato-head-right-arm
+    - name: pod-network-loss-podtato-right-leg-podtato-head-right-leg
+      CSV: pod-network-loss-podtato-right-leg-podtato-head-right-leg.chartserviceversion.yaml
+      desc: pod-network-loss-podtato-right-leg-podtato-head-right-leg
+    - name: pod-network-latency-podtato-hats-podtato-head-hats
+      CSV: pod-network-latency-podtato-hats-podtato-head-hats.chartserviceversion.yaml
+      desc: pod-network-latency-podtato-hats-podtato-head-hats
+    - name: pod-network-latency-podtato-left-arm-podtato-head-left-arm
+      CSV: pod-network-latency-podtato-left-arm-podtato-head-left-arm.chartserviceversion.yaml
+      desc: pod-network-latency-podtato-left-arm-podtato-head-left-arm
+    - name: pod-network-latency-podtato-left-leg-podtato-head-left-leg
+      CSV: pod-network-latency-podtato-left-leg-podtato-head-left-leg.chartserviceversion.yaml
+      desc: pod-network-latency-podtato-left-leg-podtato-head-left-leg
+    - name: pod-network-latency-podtato-main-podtato-head-main
+      CSV: pod-network-latency-podtato-main-podtato-head-main.chartserviceversion.yaml
+      desc: pod-network-latency-podtato-main-podtato-head-main
+    - name: pod-network-latency-podtato-right-arm-podtato-head-right-arm
+      CSV: pod-network-latency-podtato-right-arm-podtato-head-right-arm.chartserviceversion.yaml
+      desc: pod-network-latency-podtato-right-arm-podtato-head-right-arm
+    - name: pod-network-latency-podtato-right-leg-podtato-head-right-leg
+      CSV: pod-network-latency-podtato-right-leg-podtato-head-right-leg.chartserviceversion.yaml
+      desc: pod-network-latency-podtato-right-leg-podtato-head-right-leg

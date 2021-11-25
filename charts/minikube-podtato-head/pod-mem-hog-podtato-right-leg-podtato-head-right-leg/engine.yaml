@@ -1,0 +1,13 @@
+apiVersion: ""
+kind: ""
+metadata:
+    name: ""
+    namespace: ""
+spec:
+    engineState: ""
+    appinfo:
+        appns: podtato-head
+        applabel: app.kubernetes.io/component=podtato-head-right-leg
+        appkind: deployment
+    chaosServiceAccount: ""
+    experiments: []

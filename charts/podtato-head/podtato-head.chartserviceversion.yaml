@@ -1,49 +1,94 @@
 apiVersion: litmuchaos.io/v1alpha1
 kind: ChartServiceVersion
 metadata:
-  createdAt: 2019-09-26T10:28:08Z
-  name: podtato-head
-  version: 0.1.17
-  annotations:
-    categories: Kubernetes
-    chartDescription: Injects generic kubernetes chaos
+    name: minikube-podtato-head
+    version: 0.1.16
+    annotations:
+        categories: Kubernetes
+        vendor: ""
+        support: ""
 spec:
-  displayName: Generic Chaos
-  categoryDescription: >
-    Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications. It groups containers that make up an application into logical units for easier management and discovery. It will install all the experiments which can be used to inject chaos into containerized applications.
-  experiments:
-    - podtato-head-podtato-hats-container-kill
-    - podtato-head-podtato-hats-cpu-hog
-    - podtato-head-podtato-hats-memory-hog
-    - podtato-head-podtato-hats-net-loss
-  keywords:
-    - Kubernetes
-    - Container
-    - Pod
-    - Disk
-    - IO
-    - Filesystem
-    - Network
-    - CPU
-    - Memory
-    - DNS
-  platforms:
-    - PKS
-    - 
-  maintainers:
-    - name: ChaosTeam
-      email: _chaos@pole-emploi.fr
-  minKubeVersion: 1.0.0
-  provider:
-    name: Pole Emploi
-  links:
-    - name: Mattermost Chaos
-      url: https://mattermost.pe-qvr.net/tmj/channels/chaos-engineering
-    - name: Documentation
-      url: http://git-scm.pole-emploi.intra/chaos/produits/litmus/chaos-charts/tree/datamap
-    - name: Source Code
-      url: http://git-scm.pole-emploi.intra/chaos/produits/litmus/chaos-charts/tree/datamap
-  icon:
-    - url: https://raw.githubusercontent.com/litmuschaos/charthub.litmuschaos.io/master/public/litmus.ico
-      mediatype: image/png
-  chaosexpcrdlink: https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/experiments.yaml
+    displayName: minikube-podtato-head
+    experiments:
+        - container-kill-podtato-hats-podtato-head-hats
+        - container-kill-podtato-left-arm-podtato-head-left-arm
+        - container-kill-podtato-left-leg-podtato-head-left-leg
+        - container-kill-podtato-main-podtato-head-main
+        - container-kill-podtato-right-arm-podtato-head-right-arm
+        - container-kill-podtato-right-leg-podtato-head-right-leg
+        - pod-delete-podtato-hats
+        - pod-delete-podtato-left-arm
+        - pod-delete-podtato-left-leg
+        - pod-delete-podtato-main
+        - pod-delete-podtato-right-arm
+        - pod-delete-podtato-right-leg
+        - pod-cpu-hog-podtato-hats-podtato-head-hats
+        - pod-cpu-hog-podtato-left-arm-podtato-head-left-arm
+        - pod-cpu-hog-podtato-left-leg-podtato-head-left-leg
+        - pod-cpu-hog-podtato-main-podtato-head-main
+        - pod-cpu-hog-podtato-right-arm-podtato-head-right-arm
+        - pod-cpu-hog-podtato-right-leg-podtato-head-right-leg
+        - pod-mem-hog-podtato-hats-podtato-head-hats
+        - pod-mem-hog-podtato-left-arm-podtato-head-left-arm
+        - pod-mem-hog-podtato-left-leg-podtato-head-left-leg
+        - pod-mem-hog-podtato-main-podtato-head-main
+        - pod-mem-hog-podtato-right-arm-podtato-head-right-arm
+        - pod-mem-hog-podtato-right-leg-podtato-head-right-leg
+        - pod-io-stress-podtato-hats-podtato-head-hats
+        - pod-io-stress-podtato-left-arm-podtato-head-left-arm
+        - pod-io-stress-podtato-left-leg-podtato-head-left-leg
+        - pod-io-stress-podtato-main-podtato-head-main
+        - pod-io-stress-podtato-right-arm-podtato-head-right-arm
+        - pod-io-stress-podtato-right-leg-podtato-head-right-leg
+        - pod-network-corruption-podtato-hats-podtato-head-hats
+        - pod-network-corruption-podtato-left-arm-podtato-head-left-arm
+        - pod-network-corruption-podtato-left-leg-podtato-head-left-leg
+        - pod-network-corruption-podtato-main-podtato-head-main
+        - pod-network-corruption-podtato-right-arm-podtato-head-right-arm
+        - pod-network-corruption-podtato-right-leg-podtato-head-right-leg
+        - pod-network-duplication-podtato-hats-podtato-head-hats
+        - pod-network-duplication-podtato-left-arm-podtato-head-left-arm
+        - pod-network-duplication-podtato-left-leg-podtato-head-left-leg
+        - pod-network-duplication-podtato-main-podtato-head-main
+        - pod-network-duplication-podtato-right-arm-podtato-head-right-arm
+        - pod-network-duplication-podtato-right-leg-podtato-head-right-leg
+        - pod-network-loss-podtato-hats-podtato-head-hats
+        - pod-network-loss-podtato-left-arm-podtato-head-left-arm
+        - pod-network-loss-podtato-left-leg-podtato-head-left-leg
+        - pod-network-loss-podtato-main-podtato-head-main
+        - pod-network-loss-podtato-right-arm-podtato-head-right-arm
+        - pod-network-loss-podtato-right-leg-podtato-head-right-leg
+        - pod-network-latency-podtato-hats-podtato-head-hats
+        - pod-network-latency-podtato-left-arm-podtato-head-left-arm
+        - pod-network-latency-podtato-left-leg-podtato-head-left-leg
+        - pod-network-latency-podtato-main-podtato-head-main
+        - pod-network-latency-podtato-right-arm-podtato-head-right-arm
+        - pod-network-latency-podtato-right-leg-podtato-head-right-leg
+    categoryDescription: |
+        Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications. It groups containers that make up an application into logical units for easier management and discovery. It will install all the experiments which can be used to inject chaos into containerized applications.
+    keywords: []
+    platforms: []
+    maturity: ""
+    chaosType: ""
+    maintainers:
+        - name: ksatchit
+          email: karthik.s@mayadata.io
+    minKubeVersion: 1.12.0
+    provider:
+        name: Mayadata
+    labels:
+        app.kubernetes.io/component: ""
+        app.kubernetes.io/version: ""
+    links:
+        - name: Kubernetes Website
+          url: https://kubernetes.io
+        - name: Source Code
+          url: https://github.com/kubernetes/kubernetes
+        - name: Kubernetes Slack
+          url: https://slack.kubernetes.io/
+        - name: Documentation
+          url: https://litmuschaos.github.io/litmus/experiments/categories/contents/#generic
+    icon:
+        - url: https://raw.githubusercontent.com/litmuschaos/charthub.litmuschaos.io/master/public/litmus.ico
+          mediatype: image/png
+    chaosexpcrdlink: https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/experiments.yaml

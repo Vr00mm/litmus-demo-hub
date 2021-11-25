@@ -1,0 +1,13 @@
+apiVersion: ""
+kind: ""
+metadata:
+    name: ""
+    namespace: ""
+spec:
+    engineState: ""
+    appinfo:
+        appns: monitoring
+        applabel: app.kubernetes.io/name=alertmanager
+        appkind: statefulset
+    chaosServiceAccount: ""
+    experiments: []

@@ -1,0 +1,110 @@
+packageName: minikube-cert-manager
+experiments:
+    - name: container-kill-cert-manager-cert-manager
+      CSV: container-kill-cert-manager-cert-manager.chartserviceversion.yaml
+      desc: container-kill-cert-manager-cert-manager
+    - name: container-kill-cert-manager-cainjector-cert-manager
+      CSV: container-kill-cert-manager-cainjector-cert-manager.chartserviceversion.yaml
+      desc: container-kill-cert-manager-cainjector-cert-manager
+    - name: container-kill-cert-manager-webhook-cert-manager
+      CSV: container-kill-cert-manager-webhook-cert-manager.chartserviceversion.yaml
+      desc: container-kill-cert-manager-webhook-cert-manager
+    - name: container-kill-cert-manager-webhook-ovh-cert-manager-webhook-ovh
+      CSV: container-kill-cert-manager-webhook-ovh-cert-manager-webhook-ovh.chartserviceversion.yaml
+      desc: container-kill-cert-manager-webhook-ovh-cert-manager-webhook-ovh
+    - name: pod-delete-cert-manager
+      CSV: pod-delete-cert-manager.chartserviceversion.yaml
+      desc: pod-delete-cert-manager
+    - name: pod-delete-cert-manager-cainjector
+      CSV: pod-delete-cert-manager-cainjector.chartserviceversion.yaml
+      desc: pod-delete-cert-manager-cainjector
+    - name: pod-delete-cert-manager-webhook
+      CSV: pod-delete-cert-manager-webhook.chartserviceversion.yaml
+      desc: pod-delete-cert-manager-webhook
+    - name: pod-delete-cert-manager-webhook-ovh
+      CSV: pod-delete-cert-manager-webhook-ovh.chartserviceversion.yaml
+      desc: pod-delete-cert-manager-webhook-ovh
+    - name: pod-cpu-hog-cert-manager-cert-manager
+      CSV: pod-cpu-hog-cert-manager-cert-manager.chartserviceversion.yaml
+      desc: pod-cpu-hog-cert-manager-cert-manager
+    - name: pod-cpu-hog-cert-manager-cainjector-cert-manager
+      CSV: pod-cpu-hog-cert-manager-cainjector-cert-manager.chartserviceversion.yaml
+      desc: pod-cpu-hog-cert-manager-cainjector-cert-manager
+    - name: pod-cpu-hog-cert-manager-webhook-cert-manager
+      CSV: pod-cpu-hog-cert-manager-webhook-cert-manager.chartserviceversion.yaml
+      desc: pod-cpu-hog-cert-manager-webhook-cert-manager
+    - name: pod-cpu-hog-cert-manager-webhook-ovh-cert-manager-webhook-ovh
+      CSV: pod-cpu-hog-cert-manager-webhook-ovh-cert-manager-webhook-ovh.chartserviceversion.yaml
+      desc: pod-cpu-hog-cert-manager-webhook-ovh-cert-manager-webhook-ovh
+    - name: pod-mem-hog-cert-manager-cert-manager
+      CSV: pod-mem-hog-cert-manager-cert-manager.chartserviceversion.yaml
+      desc: pod-mem-hog-cert-manager-cert-manager
+    - name: pod-mem-hog-cert-manager-cainjector-cert-manager
+      CSV: pod-mem-hog-cert-manager-cainjector-cert-manager.chartserviceversion.yaml
+      desc: pod-mem-hog-cert-manager-cainjector-cert-manager
+    - name: pod-mem-hog-cert-manager-webhook-cert-manager
+      CSV: pod-mem-hog-cert-manager-webhook-cert-manager.chartserviceversion.yaml
+      desc: pod-mem-hog-cert-manager-webhook-cert-manager
+    - name: pod-mem-hog-cert-manager-webhook-ovh-cert-manager-webhook-ovh
+      CSV: pod-mem-hog-cert-manager-webhook-ovh-cert-manager-webhook-ovh.chartserviceversion.yaml
+      desc: pod-mem-hog-cert-manager-webhook-ovh-cert-manager-webhook-ovh
+    - name: pod-io-stress-cert-manager-cert-manager
+      CSV: pod-io-stress-cert-manager-cert-manager.chartserviceversion.yaml
+      desc: pod-io-stress-cert-manager-cert-manager
+    - name: pod-io-stress-cert-manager-cainjector-cert-manager
+      CSV: pod-io-stress-cert-manager-cainjector-cert-manager.chartserviceversion.yaml
+      desc: pod-io-stress-cert-manager-cainjector-cert-manager
+    - name: pod-io-stress-cert-manager-webhook-cert-manager
+      CSV: pod-io-stress-cert-manager-webhook-cert-manager.chartserviceversion.yaml
+      desc: pod-io-stress-cert-manager-webhook-cert-manager
+    - name: pod-io-stress-cert-manager-webhook-ovh-cert-manager-webhook-ovh
+      CSV: pod-io-stress-cert-manager-webhook-ovh-cert-manager-webhook-ovh.chartserviceversion.yaml
+      desc: pod-io-stress-cert-manager-webhook-ovh-cert-manager-webhook-ovh
+    - name: pod-network-corruption-cert-manager-cert-manager
+      CSV: pod-network-corruption-cert-manager-cert-manager.chartserviceversion.yaml
+      desc: pod-network-corruption-cert-manager-cert-manager
+    - name: pod-network-corruption-cert-manager-cainjector-cert-manager
+      CSV: pod-network-corruption-cert-manager-cainjector-cert-manager.chartserviceversion.yaml
+      desc: pod-network-corruption-cert-manager-cainjector-cert-manager
+    - name: pod-network-corruption-cert-manager-webhook-cert-manager
+      CSV: pod-network-corruption-cert-manager-webhook-cert-manager.chartserviceversion.yaml
+      desc: pod-network-corruption-cert-manager-webhook-cert-manager
+    - name: pod-network-corruption-cert-manager-webhook-ovh-cert-manager-webhook-ovh
+      CSV: pod-network-corruption-cert-manager-webhook-ovh-cert-manager-webhook-ovh.chartserviceversion.yaml
+      desc: pod-network-corruption-cert-manager-webhook-ovh-cert-manager-webhook-ovh
+    - name: pod-network-duplication-cert-manager-cert-manager
+      CSV: pod-network-duplication-cert-manager-cert-manager.chartserviceversion.yaml
+      desc: pod-network-duplication-cert-manager-cert-manager
+    - name: pod-network-duplication-cert-manager-cainjector-cert-manager
+      CSV: pod-network-duplication-cert-manager-cainjector-cert-manager.chartserviceversion.yaml
+      desc: pod-network-duplication-cert-manager-cainjector-cert-manager
+    - name: pod-network-duplication-cert-manager-webhook-cert-manager
+      CSV: pod-network-duplication-cert-manager-webhook-cert-manager.chartserviceversion.yaml
+      desc: pod-network-duplication-cert-manager-webhook-cert-manager
+    - name: pod-network-duplication-cert-manager-webhook-ovh-cert-manager-webhook-ovh
+      CSV: pod-network-duplication-cert-manager-webhook-ovh-cert-manager-webhook-ovh.chartserviceversion.yaml
+      desc: pod-network-duplication-cert-manager-webhook-ovh-cert-manager-webhook-ovh
+    - name: pod-network-loss-cert-manager-cert-manager
+      CSV: pod-network-loss-cert-manager-cert-manager.chartserviceversion.yaml
+      desc: pod-network-loss-cert-manager-cert-manager
+    - name: pod-network-loss-cert-manager-cainjector-cert-manager
+      CSV: pod-network-loss-cert-manager-cainjector-cert-manager.chartserviceversion.yaml
+      desc: pod-network-loss-cert-manager-cainjector-cert-manager
+    - name: pod-network-loss-cert-manager-webhook-cert-manager
+      CSV: pod-network-loss-cert-manager-webhook-cert-manager.chartserviceversion.yaml
+      desc: pod-network-loss-cert-manager-webhook-cert-manager
+    - name: pod-network-loss-cert-manager-webhook-ovh-cert-manager-webhook-ovh
+      CSV: pod-network-loss-cert-manager-webhook-ovh-cert-manager-webhook-ovh.chartserviceversion.yaml
+      desc: pod-network-loss-cert-manager-webhook-ovh-cert-manager-webhook-ovh
+    - name: pod-network-latency-cert-manager-cert-manager
+      CSV: pod-network-latency-cert-manager-cert-manager.chartserviceversion.yaml
+      desc: pod-network-latency-cert-manager-cert-manager
+    - name: pod-network-latency-cert-manager-cainjector-cert-manager
+      CSV: pod-network-latency-cert-manager-cainjector-cert-manager.chartserviceversion.yaml
+      desc: pod-network-latency-cert-manager-cainjector-cert-manager
+    - name: pod-network-latency-cert-manager-webhook-cert-manager
+      CSV: pod-network-latency-cert-manager-webhook-cert-manager.chartserviceversion.yaml
+      desc: pod-network-latency-cert-manager-webhook-cert-manager
+    - name: pod-network-latency-cert-manager-webhook-ovh-cert-manager-webhook-ovh
+      CSV: pod-network-latency-cert-manager-webhook-ovh-cert-manager-webhook-ovh.chartserviceversion.yaml
+      desc: pod-network-latency-cert-manager-webhook-ovh-cert-manager-webhook-ovh

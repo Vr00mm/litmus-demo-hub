@@ -1,0 +1,209 @@
+packageName: minikube-monitoring
+experiments:
+    - name: container-kill-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
+      CSV: container-kill-alertmanager-kube-prometheus-stack-alertmanager-alertmanager.chartserviceversion.yaml
+      desc: container-kill-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
+    - name: container-kill-alertmanager-kube-prometheus-stack-alertmanager-config-reloader
+      CSV: container-kill-alertmanager-kube-prometheus-stack-alertmanager-config-reloader.chartserviceversion.yaml
+      desc: container-kill-alertmanager-kube-prometheus-stack-alertmanager-config-reloader
+    - name: container-kill-prometheus-kube-prometheus-stack-prometheus-prometheus
+      CSV: container-kill-prometheus-kube-prometheus-stack-prometheus-prometheus.chartserviceversion.yaml
+      desc: container-kill-prometheus-kube-prometheus-stack-prometheus-prometheus
+    - name: container-kill-prometheus-kube-prometheus-stack-prometheus-config-reloader
+      CSV: container-kill-prometheus-kube-prometheus-stack-prometheus-config-reloader.chartserviceversion.yaml
+      desc: container-kill-prometheus-kube-prometheus-stack-prometheus-config-reloader
+    - name: container-kill-kube-prometheus-stack-grafana-grafana-sc-dashboard
+      CSV: container-kill-kube-prometheus-stack-grafana-grafana-sc-dashboard.chartserviceversion.yaml
+      desc: container-kill-kube-prometheus-stack-grafana-grafana-sc-dashboard
+    - name: container-kill-kube-prometheus-stack-grafana-grafana
+      CSV: container-kill-kube-prometheus-stack-grafana-grafana.chartserviceversion.yaml
+      desc: container-kill-kube-prometheus-stack-grafana-grafana
+    - name: container-kill-kube-prometheus-stack-kube-state-metrics-kube-state-metrics
+      CSV: container-kill-kube-prometheus-stack-kube-state-metrics-kube-state-metrics.chartserviceversion.yaml
+      desc: container-kill-kube-prometheus-stack-kube-state-metrics-kube-state-metrics
+    - name: container-kill-kube-prometheus-stack-operator-kube-prometheus-stack
+      CSV: container-kill-kube-prometheus-stack-operator-kube-prometheus-stack.chartserviceversion.yaml
+      desc: container-kill-kube-prometheus-stack-operator-kube-prometheus-stack
+    - name: pod-delete-alertmanager-kube-prometheus-stack-alertmanager
+      CSV: pod-delete-alertmanager-kube-prometheus-stack-alertmanager.chartserviceversion.yaml
+      desc: pod-delete-alertmanager-kube-prometheus-stack-alertmanager
+    - name: pod-delete-prometheus-kube-prometheus-stack-prometheus
+      CSV: pod-delete-prometheus-kube-prometheus-stack-prometheus.chartserviceversion.yaml
+      desc: pod-delete-prometheus-kube-prometheus-stack-prometheus
+    - name: pod-delete-kube-prometheus-stack-grafana
+      CSV: pod-delete-kube-prometheus-stack-grafana.chartserviceversion.yaml
+      desc: pod-delete-kube-prometheus-stack-grafana
+    - name: pod-delete-kube-prometheus-stack-kube-state-metrics
+      CSV: pod-delete-kube-prometheus-stack-kube-state-metrics.chartserviceversion.yaml
+      desc: pod-delete-kube-prometheus-stack-kube-state-metrics
+    - name: pod-delete-kube-prometheus-stack-operator
+      CSV: pod-delete-kube-prometheus-stack-operator.chartserviceversion.yaml
+      desc: pod-delete-kube-prometheus-stack-operator
+    - name: pod-cpu-hog-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
+      CSV: pod-cpu-hog-alertmanager-kube-prometheus-stack-alertmanager-alertmanager.chartserviceversion.yaml
+      desc: pod-cpu-hog-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
+    - name: pod-cpu-hog-alertmanager-kube-prometheus-stack-alertmanager-config-reloader
+      CSV: pod-cpu-hog-alertmanager-kube-prometheus-stack-alertmanager-config-reloader.chartserviceversion.yaml
+      desc: pod-cpu-hog-alertmanager-kube-prometheus-stack-alertmanager-config-reloader
+    - name: pod-cpu-hog-prometheus-kube-prometheus-stack-prometheus-prometheus
+      CSV: pod-cpu-hog-prometheus-kube-prometheus-stack-prometheus-prometheus.chartserviceversion.yaml
+      desc: pod-cpu-hog-prometheus-kube-prometheus-stack-prometheus-prometheus
+    - name: pod-cpu-hog-prometheus-kube-prometheus-stack-prometheus-config-reloader
+      CSV: pod-cpu-hog-prometheus-kube-prometheus-stack-prometheus-config-reloader.chartserviceversion.yaml
+      desc: pod-cpu-hog-prometheus-kube-prometheus-stack-prometheus-config-reloader
+    - name: pod-cpu-hog-kube-prometheus-stack-grafana-grafana-sc-dashboard
+      CSV: pod-cpu-hog-kube-prometheus-stack-grafana-grafana-sc-dashboard.chartserviceversion.yaml
+      desc: pod-cpu-hog-kube-prometheus-stack-grafana-grafana-sc-dashboard
+    - name: pod-cpu-hog-kube-prometheus-stack-grafana-grafana
+      CSV: pod-cpu-hog-kube-prometheus-stack-grafana-grafana.chartserviceversion.yaml
+      desc: pod-cpu-hog-kube-prometheus-stack-grafana-grafana
+    - name: pod-cpu-hog-kube-prometheus-stack-kube-state-metrics-kube-state-metrics
+      CSV: pod-cpu-hog-kube-prometheus-stack-kube-state-metrics-kube-state-metrics.chartserviceversion.yaml
+      desc: pod-cpu-hog-kube-prometheus-stack-kube-state-metrics-kube-state-metrics
+    - name: pod-cpu-hog-kube-prometheus-stack-operator-kube-prometheus-stack
+      CSV: pod-cpu-hog-kube-prometheus-stack-operator-kube-prometheus-stack.chartserviceversion.yaml
+      desc: pod-cpu-hog-kube-prometheus-stack-operator-kube-prometheus-stack
+    - name: pod-mem-hog-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
+      CSV: pod-mem-hog-alertmanager-kube-prometheus-stack-alertmanager-alertmanager.chartserviceversion.yaml
+      desc: pod-mem-hog-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
+    - name: pod-mem-hog-alertmanager-kube-prometheus-stack-alertmanager-config-reloader
+      CSV: pod-mem-hog-alertmanager-kube-prometheus-stack-alertmanager-config-reloader.chartserviceversion.yaml
+      desc: pod-mem-hog-alertmanager-kube-prometheus-stack-alertmanager-config-reloader
+    - name: pod-mem-hog-prometheus-kube-prometheus-stack-prometheus-prometheus
+      CSV: pod-mem-hog-prometheus-kube-prometheus-stack-prometheus-prometheus.chartserviceversion.yaml
+      desc: pod-mem-hog-prometheus-kube-prometheus-stack-prometheus-prometheus
+    - name: pod-mem-hog-prometheus-kube-prometheus-stack-prometheus-config-reloader
+      CSV: pod-mem-hog-prometheus-kube-prometheus-stack-prometheus-config-reloader.chartserviceversion.yaml
+      desc: pod-mem-hog-prometheus-kube-prometheus-stack-prometheus-config-reloader
+    - name: pod-mem-hog-kube-prometheus-stack-grafana-grafana-sc-dashboard
+      CSV: pod-mem-hog-kube-prometheus-stack-grafana-grafana-sc-dashboard.chartserviceversion.yaml
+      desc: pod-mem-hog-kube-prometheus-stack-grafana-grafana-sc-dashboard
+    - name: pod-mem-hog-kube-prometheus-stack-grafana-grafana
+      CSV: pod-mem-hog-kube-prometheus-stack-grafana-grafana.chartserviceversion.yaml
+      desc: pod-mem-hog-kube-prometheus-stack-grafana-grafana
+    - name: pod-mem-hog-kube-prometheus-stack-kube-state-metrics-kube-state-metrics
+      CSV: pod-mem-hog-kube-prometheus-stack-kube-state-metrics-kube-state-metrics.chartserviceversion.yaml
+      desc: pod-mem-hog-kube-prometheus-stack-kube-state-metrics-kube-state-metrics
+    - name: pod-mem-hog-kube-prometheus-stack-operator-kube-prometheus-stack
+      CSV: pod-mem-hog-kube-prometheus-stack-operator-kube-prometheus-stack.chartserviceversion.yaml
+      desc: pod-mem-hog-kube-prometheus-stack-operator-kube-prometheus-stack
+    - name: pod-io-stress-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
+      CSV: pod-io-stress-alertmanager-kube-prometheus-stack-alertmanager-alertmanager.chartserviceversion.yaml
+      desc: pod-io-stress-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
+    - name: pod-io-stress-alertmanager-kube-prometheus-stack-alertmanager-config-reloader
+      CSV: pod-io-stress-alertmanager-kube-prometheus-stack-alertmanager-config-reloader.chartserviceversion.yaml
+      desc: pod-io-stress-alertmanager-kube-prometheus-stack-alertmanager-config-reloader
+    - name: pod-io-stress-prometheus-kube-prometheus-stack-prometheus-prometheus
+      CSV: pod-io-stress-prometheus-kube-prometheus-stack-prometheus-prometheus.chartserviceversion.yaml
+      desc: pod-io-stress-prometheus-kube-prometheus-stack-prometheus-prometheus
+    - name: pod-io-stress-prometheus-kube-prometheus-stack-prometheus-config-reloader
+      CSV: pod-io-stress-prometheus-kube-prometheus-stack-prometheus-config-reloader.chartserviceversion.yaml
+      desc: pod-io-stress-prometheus-kube-prometheus-stack-prometheus-config-reloader
+    - name: pod-io-stress-kube-prometheus-stack-grafana-grafana-sc-dashboard
+      CSV: pod-io-stress-kube-prometheus-stack-grafana-grafana-sc-dashboard.chartserviceversion.yaml
+      desc: pod-io-stress-kube-prometheus-stack-grafana-grafana-sc-dashboard
+    - name: pod-io-stress-kube-prometheus-stack-grafana-grafana
+      CSV: pod-io-stress-kube-prometheus-stack-grafana-grafana.chartserviceversion.yaml
+      desc: pod-io-stress-kube-prometheus-stack-grafana-grafana
+    - name: pod-io-stress-kube-prometheus-stack-kube-state-metrics-kube-state-metrics
+      CSV: pod-io-stress-kube-prometheus-stack-kube-state-metrics-kube-state-metrics.chartserviceversion.yaml
+      desc: pod-io-stress-kube-prometheus-stack-kube-state-metrics-kube-state-metrics
+    - name: pod-io-stress-kube-prometheus-stack-operator-kube-prometheus-stack
+      CSV: pod-io-stress-kube-prometheus-stack-operator-kube-prometheus-stack.chartserviceversion.yaml
+      desc: pod-io-stress-kube-prometheus-stack-operator-kube-prometheus-stack
+    - name: pod-network-corruption-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
+      CSV: pod-network-corruption-alertmanager-kube-prometheus-stack-alertmanager-alertmanager.chartserviceversion.yaml
+      desc: pod-network-corruption-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
+    - name: pod-network-corruption-alertmanager-kube-prometheus-stack-alertmanager-config-reloader
+      CSV: pod-network-corruption-alertmanager-kube-prometheus-stack-alertmanager-config-reloader.chartserviceversion.yaml
+      desc: pod-network-corruption-alertmanager-kube-prometheus-stack-alertmanager-config-reloader
+    - name: pod-network-corruption-prometheus-kube-prometheus-stack-prometheus-prometheus
+      CSV: pod-network-corruption-prometheus-kube-prometheus-stack-prometheus-prometheus.chartserviceversion.yaml
+      desc: pod-network-corruption-prometheus-kube-prometheus-stack-prometheus-prometheus
+    - name: pod-network-corruption-prometheus-kube-prometheus-stack-prometheus-config-reloader
+      CSV: pod-network-corruption-prometheus-kube-prometheus-stack-prometheus-config-reloader.chartserviceversion.yaml
+      desc: pod-network-corruption-prometheus-kube-prometheus-stack-prometheus-config-reloader
+    - name: pod-network-corruption-kube-prometheus-stack-grafana-grafana-sc-dashboard
+      CSV: pod-network-corruption-kube-prometheus-stack-grafana-grafana-sc-dashboard.chartserviceversion.yaml
+      desc: pod-network-corruption-kube-prometheus-stack-grafana-grafana-sc-dashboard
+    - name: pod-network-corruption-kube-prometheus-stack-grafana-grafana
+      CSV: pod-network-corruption-kube-prometheus-stack-grafana-grafana.chartserviceversion.yaml
+      desc: pod-network-corruption-kube-prometheus-stack-grafana-grafana
+    - name: pod-network-corruption-kube-prometheus-stack-kube-state-metrics-kube-state-metrics
+      CSV: pod-network-corruption-kube-prometheus-stack-kube-state-metrics-kube-state-metrics.chartserviceversion.yaml
+      desc: pod-network-corruption-kube-prometheus-stack-kube-state-metrics-kube-state-metrics
+    - name: pod-network-corruption-kube-prometheus-stack-operator-kube-prometheus-stack
+      CSV: pod-network-corruption-kube-prometheus-stack-operator-kube-prometheus-stack.chartserviceversion.yaml
+      desc: pod-network-corruption-kube-prometheus-stack-operator-kube-prometheus-stack
+    - name: pod-network-duplication-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
+      CSV: pod-network-duplication-alertmanager-kube-prometheus-stack-alertmanager-alertmanager.chartserviceversion.yaml
+      desc: pod-network-duplication-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
+    - name: pod-network-duplication-alertmanager-kube-prometheus-stack-alertmanager-config-reloader
+      CSV: pod-network-duplication-alertmanager-kube-prometheus-stack-alertmanager-config-reloader.chartserviceversion.yaml
+      desc: pod-network-duplication-alertmanager-kube-prometheus-stack-alertmanager-config-reloader
+    - name: pod-network-duplication-prometheus-kube-prometheus-stack-prometheus-prometheus
+      CSV: pod-network-duplication-prometheus-kube-prometheus-stack-prometheus-prometheus.chartserviceversion.yaml
+      desc: pod-network-duplication-prometheus-kube-prometheus-stack-prometheus-prometheus
+    - name: pod-network-duplication-prometheus-kube-prometheus-stack-prometheus-config-reloader
+      CSV: pod-network-duplication-prometheus-kube-prometheus-stack-prometheus-config-reloader.chartserviceversion.yaml
+      desc: pod-network-duplication-prometheus-kube-prometheus-stack-prometheus-config-reloader
+    - name: pod-network-duplication-kube-prometheus-stack-grafana-grafana-sc-dashboard
+      CSV: pod-network-duplication-kube-prometheus-stack-grafana-grafana-sc-dashboard.chartserviceversion.yaml
+      desc: pod-network-duplication-kube-prometheus-stack-grafana-grafana-sc-dashboard
+    - name: pod-network-duplication-kube-prometheus-stack-grafana-grafana
+      CSV: pod-network-duplication-kube-prometheus-stack-grafana-grafana.chartserviceversion.yaml
+      desc: pod-network-duplication-kube-prometheus-stack-grafana-grafana
+    - name: pod-network-duplication-kube-prometheus-stack-kube-state-metrics-kube-state-metrics
+      CSV: pod-network-duplication-kube-prometheus-stack-kube-state-metrics-kube-state-metrics.chartserviceversion.yaml
+      desc: pod-network-duplication-kube-prometheus-stack-kube-state-metrics-kube-state-metrics
+    - name: pod-network-duplication-kube-prometheus-stack-operator-kube-prometheus-stack
+      CSV: pod-network-duplication-kube-prometheus-stack-operator-kube-prometheus-stack.chartserviceversion.yaml
+      desc: pod-network-duplication-kube-prometheus-stack-operator-kube-prometheus-stack
+    - name: pod-network-loss-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
+      CSV: pod-network-loss-alertmanager-kube-prometheus-stack-alertmanager-alertmanager.chartserviceversion.yaml
+      desc: pod-network-loss-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
+    - name: pod-network-loss-alertmanager-kube-prometheus-stack-alertmanager-config-reloader
+      CSV: pod-network-loss-alertmanager-kube-prometheus-stack-alertmanager-config-reloader.chartserviceversion.yaml
+      desc: pod-network-loss-alertmanager-kube-prometheus-stack-alertmanager-config-reloader
+    - name: pod-network-loss-prometheus-kube-prometheus-stack-prometheus-prometheus
+      CSV: pod-network-loss-prometheus-kube-prometheus-stack-prometheus-prometheus.chartserviceversion.yaml
+      desc: pod-network-loss-prometheus-kube-prometheus-stack-prometheus-prometheus
+    - name: pod-network-loss-prometheus-kube-prometheus-stack-prometheus-config-reloader
+      CSV: pod-network-loss-prometheus-kube-prometheus-stack-prometheus-config-reloader.chartserviceversion.yaml
+      desc: pod-network-loss-prometheus-kube-prometheus-stack-prometheus-config-reloader
+    - name: pod-network-loss-kube-prometheus-stack-grafana-grafana-sc-dashboard
+      CSV: pod-network-loss-kube-prometheus-stack-grafana-grafana-sc-dashboard.chartserviceversion.yaml
+      desc: pod-network-loss-kube-prometheus-stack-grafana-grafana-sc-dashboard
+    - name: pod-network-loss-kube-prometheus-stack-grafana-grafana
+      CSV: pod-network-loss-kube-prometheus-stack-grafana-grafana.chartserviceversion.yaml
+      desc: pod-network-loss-kube-prometheus-stack-grafana-grafana
+    - name: pod-network-loss-kube-prometheus-stack-kube-state-metrics-kube-state-metrics
+      CSV: pod-network-loss-kube-prometheus-stack-kube-state-metrics-kube-state-metrics.chartserviceversion.yaml
+      desc: pod-network-loss-kube-prometheus-stack-kube-state-metrics-kube-state-metrics
+    - name: pod-network-loss-kube-prometheus-stack-operator-kube-prometheus-stack
+      CSV: pod-network-loss-kube-prometheus-stack-operator-kube-prometheus-stack.chartserviceversion.yaml
+      desc: pod-network-loss-kube-prometheus-stack-operator-kube-prometheus-stack
+    - name: pod-network-latency-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
+      CSV: pod-network-latency-alertmanager-kube-prometheus-stack-alertmanager-alertmanager.chartserviceversion.yaml
+      desc: pod-network-latency-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
+    - name: pod-network-latency-alertmanager-kube-prometheus-stack-alertmanager-config-reloader
+      CSV: pod-network-latency-alertmanager-kube-prometheus-stack-alertmanager-config-reloader.chartserviceversion.yaml
+      desc: pod-network-latency-alertmanager-kube-prometheus-stack-alertmanager-config-reloader
+    - name: pod-network-latency-prometheus-kube-prometheus-stack-prometheus-prometheus
+      CSV: pod-network-latency-prometheus-kube-prometheus-stack-prometheus-prometheus.chartserviceversion.yaml
+      desc: pod-network-latency-prometheus-kube-prometheus-stack-prometheus-prometheus
+    - name: pod-network-latency-prometheus-kube-prometheus-stack-prometheus-config-reloader
+      CSV: pod-network-latency-prometheus-kube-prometheus-stack-prometheus-config-reloader.chartserviceversion.yaml
+      desc: pod-network-latency-prometheus-kube-prometheus-stack-prometheus-config-reloader
+    - name: pod-network-latency-kube-prometheus-stack-grafana-grafana-sc-dashboard
+      CSV: pod-network-latency-kube-prometheus-stack-grafana-grafana-sc-dashboard.chartserviceversion.yaml
+      desc: pod-network-latency-kube-prometheus-stack-grafana-grafana-sc-dashboard
+    - name: pod-network-latency-kube-prometheus-stack-grafana-grafana
+      CSV: pod-network-latency-kube-prometheus-stack-grafana-grafana.chartserviceversion.yaml
+      desc: pod-network-latency-kube-prometheus-stack-grafana-grafana
+    - name: pod-network-latency-kube-prometheus-stack-kube-state-metrics-kube-state-metrics
+      CSV: pod-network-latency-kube-prometheus-stack-kube-state-metrics-kube-state-metrics.chartserviceversion.yaml
+      desc: pod-network-latency-kube-prometheus-stack-kube-state-metrics-kube-state-metrics
+    - name: pod-network-latency-kube-prometheus-stack-operator-kube-prometheus-stack
+      CSV: pod-network-latency-kube-prometheus-stack-operator-kube-prometheus-stack.chartserviceversion.yaml
+      desc: pod-network-latency-kube-prometheus-stack-operator-kube-prometheus-stack

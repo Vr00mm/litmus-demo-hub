@@ -1,0 +1,29 @@
+packageName: minikube-oidc-provider
+experiments:
+    - name: container-kill-oidc-dex-dex
+      CSV: container-kill-oidc-dex-dex.chartserviceversion.yaml
+      desc: container-kill-oidc-dex-dex
+    - name: pod-delete-oidc-dex
+      CSV: pod-delete-oidc-dex.chartserviceversion.yaml
+      desc: pod-delete-oidc-dex
+    - name: pod-cpu-hog-oidc-dex-dex
+      CSV: pod-cpu-hog-oidc-dex-dex.chartserviceversion.yaml
+      desc: pod-cpu-hog-oidc-dex-dex
+    - name: pod-mem-hog-oidc-dex-dex
+      CSV: pod-mem-hog-oidc-dex-dex.chartserviceversion.yaml
+      desc: pod-mem-hog-oidc-dex-dex
+    - name: pod-io-stress-oidc-dex-dex
+      CSV: pod-io-stress-oidc-dex-dex.chartserviceversion.yaml
+      desc: pod-io-stress-oidc-dex-dex
+    - name: pod-network-corruption-oidc-dex-dex
+      CSV: pod-network-corruption-oidc-dex-dex.chartserviceversion.yaml
+      desc: pod-network-corruption-oidc-dex-dex
+    - name: pod-network-duplication-oidc-dex-dex
+      CSV: pod-network-duplication-oidc-dex-dex.chartserviceversion.yaml
+      desc: pod-network-duplication-oidc-dex-dex
+    - name: pod-network-loss-oidc-dex-dex
+      CSV: pod-network-loss-oidc-dex-dex.chartserviceversion.yaml
+      desc: pod-network-loss-oidc-dex-dex
+    - name: pod-network-latency-oidc-dex-dex
+      CSV: pod-network-latency-oidc-dex-dex.chartserviceversion.yaml
+      desc: pod-network-latency-oidc-dex-dex

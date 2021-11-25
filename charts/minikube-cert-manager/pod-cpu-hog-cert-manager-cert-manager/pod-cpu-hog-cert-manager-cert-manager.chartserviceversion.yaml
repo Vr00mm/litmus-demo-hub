@@ -1,0 +1,23 @@
+apiVersion: ""
+kind: ""
+metadata:
+    name: pod-cpu-hog-cert-manager-cert-manager
+    labels:
+        name: ""
+        app.kubernetes.io/part-of: ""
+        app.kubernetes.io/component: ""
+        app.kubernetes.io/version: ""
+spec:
+    definition:
+        scope: ""
+        permissions: []
+        image: ""
+        imagePullPolicy: ""
+        args: []
+        command: []
+        env: []
+        labels:
+            name: ""
+            app.kubernetes.io/part-of: ""
+            app.kubernetes.io/component: ""
+            app.kubernetes.io/version: ""

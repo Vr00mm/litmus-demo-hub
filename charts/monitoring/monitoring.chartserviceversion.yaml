@@ -1,0 +1,109 @@
+apiVersion: litmuchaos.io/v1alpha1
+kind: ChartServiceVersion
+metadata:
+    name: minikube-monitoring
+    version: 0.1.16
+    annotations:
+        categories: Kubernetes
+        vendor: ""
+        support: ""
+spec:
+    displayName: minikube-monitoring
+    experiments:
+        - container-kill-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
+        - container-kill-alertmanager-kube-prometheus-stack-alertmanager-config-reloader
+        - container-kill-prometheus-kube-prometheus-stack-prometheus-prometheus
+        - container-kill-prometheus-kube-prometheus-stack-prometheus-config-reloader
+        - container-kill-kube-prometheus-stack-grafana-grafana-sc-dashboard
+        - container-kill-kube-prometheus-stack-grafana-grafana
+        - container-kill-kube-prometheus-stack-kube-state-metrics-kube-state-metrics
+        - container-kill-kube-prometheus-stack-operator-kube-prometheus-stack
+        - pod-delete-alertmanager-kube-prometheus-stack-alertmanager
+        - pod-delete-prometheus-kube-prometheus-stack-prometheus
+        - pod-delete-kube-prometheus-stack-grafana
+        - pod-delete-kube-prometheus-stack-kube-state-metrics
+        - pod-delete-kube-prometheus-stack-operator
+        - pod-cpu-hog-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
+        - pod-cpu-hog-alertmanager-kube-prometheus-stack-alertmanager-config-reloader
+        - pod-cpu-hog-prometheus-kube-prometheus-stack-prometheus-prometheus
+        - pod-cpu-hog-prometheus-kube-prometheus-stack-prometheus-config-reloader
+        - pod-cpu-hog-kube-prometheus-stack-grafana-grafana-sc-dashboard
+        - pod-cpu-hog-kube-prometheus-stack-grafana-grafana
+        - pod-cpu-hog-kube-prometheus-stack-kube-state-metrics-kube-state-metrics
+        - pod-cpu-hog-kube-prometheus-stack-operator-kube-prometheus-stack
+        - pod-mem-hog-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
+        - pod-mem-hog-alertmanager-kube-prometheus-stack-alertmanager-config-reloader
+        - pod-mem-hog-prometheus-kube-prometheus-stack-prometheus-prometheus
+        - pod-mem-hog-prometheus-kube-prometheus-stack-prometheus-config-reloader
+        - pod-mem-hog-kube-prometheus-stack-grafana-grafana-sc-dashboard
+        - pod-mem-hog-kube-prometheus-stack-grafana-grafana
+        - pod-mem-hog-kube-prometheus-stack-kube-state-metrics-kube-state-metrics
+        - pod-mem-hog-kube-prometheus-stack-operator-kube-prometheus-stack
+        - pod-io-stress-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
+        - pod-io-stress-alertmanager-kube-prometheus-stack-alertmanager-config-reloader
+        - pod-io-stress-prometheus-kube-prometheus-stack-prometheus-prometheus
+        - pod-io-stress-prometheus-kube-prometheus-stack-prometheus-config-reloader
+        - pod-io-stress-kube-prometheus-stack-grafana-grafana-sc-dashboard
+        - pod-io-stress-kube-prometheus-stack-grafana-grafana
+        - pod-io-stress-kube-prometheus-stack-kube-state-metrics-kube-state-metrics
+        - pod-io-stress-kube-prometheus-stack-operator-kube-prometheus-stack
+        - pod-network-corruption-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
+        - pod-network-corruption-alertmanager-kube-prometheus-stack-alertmanager-config-reloader
+        - pod-network-corruption-prometheus-kube-prometheus-stack-prometheus-prometheus
+        - pod-network-corruption-prometheus-kube-prometheus-stack-prometheus-config-reloader
+        - pod-network-corruption-kube-prometheus-stack-grafana-grafana-sc-dashboard
+        - pod-network-corruption-kube-prometheus-stack-grafana-grafana
+        - pod-network-corruption-kube-prometheus-stack-kube-state-metrics-kube-state-metrics
+        - pod-network-corruption-kube-prometheus-stack-operator-kube-prometheus-stack
+        - pod-network-duplication-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
+        - pod-network-duplication-alertmanager-kube-prometheus-stack-alertmanager-config-reloader
+        - pod-network-duplication-prometheus-kube-prometheus-stack-prometheus-prometheus
+        - pod-network-duplication-prometheus-kube-prometheus-stack-prometheus-config-reloader
+        - pod-network-duplication-kube-prometheus-stack-grafana-grafana-sc-dashboard
+        - pod-network-duplication-kube-prometheus-stack-grafana-grafana
+        - pod-network-duplication-kube-prometheus-stack-kube-state-metrics-kube-state-metrics
+        - pod-network-duplication-kube-prometheus-stack-operator-kube-prometheus-stack
+        - pod-network-loss-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
+        - pod-network-loss-alertmanager-kube-prometheus-stack-alertmanager-config-reloader
+        - pod-network-loss-prometheus-kube-prometheus-stack-prometheus-prometheus
+        - pod-network-loss-prometheus-kube-prometheus-stack-prometheus-config-reloader
+        - pod-network-loss-kube-prometheus-stack-grafana-grafana-sc-dashboard
+        - pod-network-loss-kube-prometheus-stack-grafana-grafana
+        - pod-network-loss-kube-prometheus-stack-kube-state-metrics-kube-state-metrics
+        - pod-network-loss-kube-prometheus-stack-operator-kube-prometheus-stack
+        - pod-network-latency-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
+        - pod-network-latency-alertmanager-kube-prometheus-stack-alertmanager-config-reloader
+        - pod-network-latency-prometheus-kube-prometheus-stack-prometheus-prometheus
+        - pod-network-latency-prometheus-kube-prometheus-stack-prometheus-config-reloader
+        - pod-network-latency-kube-prometheus-stack-grafana-grafana-sc-dashboard
+        - pod-network-latency-kube-prometheus-stack-grafana-grafana
+        - pod-network-latency-kube-prometheus-stack-kube-state-metrics-kube-state-metrics
+        - pod-network-latency-kube-prometheus-stack-operator-kube-prometheus-stack
+    categoryDescription: |
+        Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications. It groups containers that make up an application into logical units for easier management and discovery. It will install all the experiments which can be used to inject chaos into containerized applications.
+    keywords: []
+    platforms: []
+    maturity: ""
+    chaosType: ""
+    maintainers:
+        - name: ksatchit
+          email: karthik.s@mayadata.io
+    minKubeVersion: 1.12.0
+    provider:
+        name: Mayadata
+    labels:
+        app.kubernetes.io/component: ""
+        app.kubernetes.io/version: ""
+    links:
+        - name: Kubernetes Website
+          url: https://kubernetes.io
+        - name: Source Code
+          url: https://github.com/kubernetes/kubernetes
+        - name: Kubernetes Slack
+          url: https://slack.kubernetes.io/
+        - name: Documentation
+          url: https://litmuschaos.github.io/litmus/experiments/categories/contents/#generic
+    icon:
+        - url: https://raw.githubusercontent.com/litmuschaos/charthub.litmuschaos.io/master/public/litmus.ico
+          mediatype: image/png
+    chaosexpcrdlink: https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/generic/experiments.yaml

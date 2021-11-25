@@ -1,0 +1,29 @@
+packageName: minikube-ingress-nginx
+experiments:
+    - name: container-kill-ingress-nginx-controller-controller
+      CSV: container-kill-ingress-nginx-controller-controller.chartserviceversion.yaml
+      desc: container-kill-ingress-nginx-controller-controller
+    - name: pod-delete-ingress-nginx-controller
+      CSV: pod-delete-ingress-nginx-controller.chartserviceversion.yaml
+      desc: pod-delete-ingress-nginx-controller
+    - name: pod-cpu-hog-ingress-nginx-controller-controller
+      CSV: pod-cpu-hog-ingress-nginx-controller-controller.chartserviceversion.yaml
+      desc: pod-cpu-hog-ingress-nginx-controller-controller
+    - name: pod-mem-hog-ingress-nginx-controller-controller
+      CSV: pod-mem-hog-ingress-nginx-controller-controller.chartserviceversion.yaml
+      desc: pod-mem-hog-ingress-nginx-controller-controller
+    - name: pod-io-stress-ingress-nginx-controller-controller
+      CSV: pod-io-stress-ingress-nginx-controller-controller.chartserviceversion.yaml
+      desc: pod-io-stress-ingress-nginx-controller-controller
+    - name: pod-network-corruption-ingress-nginx-controller-controller
+      CSV: pod-network-corruption-ingress-nginx-controller-controller.chartserviceversion.yaml
+      desc: pod-network-corruption-ingress-nginx-controller-controller
+    - name: pod-network-duplication-ingress-nginx-controller-controller
+      CSV: pod-network-duplication-ingress-nginx-controller-controller.chartserviceversion.yaml
+      desc: pod-network-duplication-ingress-nginx-controller-controller
+    - name: pod-network-loss-ingress-nginx-controller-controller
+      CSV: pod-network-loss-ingress-nginx-controller-controller.chartserviceversion.yaml
+      desc: pod-network-loss-ingress-nginx-controller-controller
+    - name: pod-network-latency-ingress-nginx-controller-controller
+      CSV: pod-network-latency-ingress-nginx-controller-controller.chartserviceversion.yaml
+      desc: pod-network-latency-ingress-nginx-controller-controller
