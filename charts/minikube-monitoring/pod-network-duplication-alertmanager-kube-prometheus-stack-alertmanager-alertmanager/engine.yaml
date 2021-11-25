@@ -7,7 +7,7 @@ spec:
     engineState: active
     appinfo:
         appns: monitoring
-        applabel: app.kubernetes.io/name=alertmanager
+        applabel: alertmanager=kube-prometheus-stack-alertmanager
         appkind: statefulset
     chaosServiceAccount: pod-network-duplication-sa
     experiments:

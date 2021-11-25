@@ -7,7 +7,7 @@ spec:
     engineState: active
     appinfo:
         appns: monitoring
-        applabel: operator.prometheus.io/shard=0
+        applabel: app.kubernetes.io/name=prometheus
         appkind: statefulset
     chaosServiceAccount: pod-io-stress-sa
     experiments:

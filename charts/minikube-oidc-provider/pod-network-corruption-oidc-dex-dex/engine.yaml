@@ -7,7 +7,7 @@ spec:
     engineState: active
     appinfo:
         appns: oidc-provider
-        applabel: app.kubernetes.io/instance=oidc-dex
+        applabel: app.kubernetes.io/name=dex
         appkind: deployment
     chaosServiceAccount: pod-network-corruption-sa
     experiments:
