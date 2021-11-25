@@ -7,19 +7,13 @@ spec:
     engineState: active
     appinfo:
         appns: monitoring
-        applabel: app.kubernetes.io/part-of=kube-prometheus-stack
+        applabel: chart=kube-prometheus-stack-20.0.1
         appkind: deployment
     chaosServiceAccount: pod-io-stress-sa
     experiments:
-        - name: pod-io-stress
+        - name: pod-io-stress-kube-prometheus-stack-operator-kube-prometheus-stack
           spec:
             components:
                 env:
-                    - name: TOTAL_CHAOS_DURATION
-                      value: "120"
-                    - name: FILESYSTEM_UTILIZATION_PERCENTAGE
-                      value: "10"
-                    - name: CONTAINER_RUNTIME
-                      value: docker
-                    - name: SOCKET_PATH
-                      value: /var/run/docker.sock
+                    - name: TARGET_CONTAINER
+                      value: kube-prometheus-stack

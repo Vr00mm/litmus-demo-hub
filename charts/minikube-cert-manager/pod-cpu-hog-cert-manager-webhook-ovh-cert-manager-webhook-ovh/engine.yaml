@@ -10,4 +10,10 @@ spec:
         applabel: app=cert-manager-webhook-ovh
         appkind: deployment
     chaosServiceAccount: ""
-    experiments: []
+    experiments:
+        - name: pod-cpu-hog-cert-manager-webhook-ovh-cert-manager-webhook-ovh
+          spec:
+            components:
+                env:
+                    - name: TARGET_CONTAINER
+                      value: cert-manager-webhook-ovh

@@ -7,19 +7,13 @@ spec:
     engineState: active
     appinfo:
         appns: litmus
-        applabel: app.kubernetes.io/component=operator
+        applabel: app.kubernetes.io/version=latest
         appkind: deployment
     chaosServiceAccount: pod-io-stress-sa
     experiments:
-        - name: pod-io-stress
+        - name: pod-io-stress-chaos-operator-ce-chaos-operator
           spec:
             components:
                 env:
-                    - name: TOTAL_CHAOS_DURATION
-                      value: "120"
-                    - name: FILESYSTEM_UTILIZATION_PERCENTAGE
-                      value: "10"
-                    - name: CONTAINER_RUNTIME
-                      value: docker
-                    - name: SOCKET_PATH
-                      value: /var/run/docker.sock
+                    - name: TARGET_CONTAINER
+                      value: chaos-operator

@@ -10,4 +10,10 @@ spec:
         applabel: app.kubernetes.io/instance=oidc-dex
         appkind: deployment
     chaosServiceAccount: ""
-    experiments: []
+    experiments:
+        - name: pod-mem-hog-oidc-dex-dex
+          spec:
+            components:
+                env:
+                    - name: TARGET_CONTAINER
+                      value: dex

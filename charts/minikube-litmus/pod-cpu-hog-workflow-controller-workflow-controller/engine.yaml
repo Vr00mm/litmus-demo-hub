@@ -10,4 +10,10 @@ spec:
         applabel: app=workflow-controller
         appkind: deployment
     chaosServiceAccount: ""
-    experiments: []
+    experiments:
+        - name: pod-cpu-hog-workflow-controller-workflow-controller
+          spec:
+            components:
+                env:
+                    - name: TARGET_CONTAINER
+                      value: workflow-controller

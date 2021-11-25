@@ -10,4 +10,10 @@ spec:
         applabel: app.kubernetes.io/name=alertmanager
         appkind: statefulset
     chaosServiceAccount: ""
-    experiments: []
+    experiments:
+        - name: pod-cpu-hog-alertmanager-kube-prometheus-stack-alertmanager-alertmanager
+          spec:
+            components:
+                env:
+                    - name: TARGET_CONTAINER
+                      value: alertmanager

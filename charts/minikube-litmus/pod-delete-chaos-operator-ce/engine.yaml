@@ -7,19 +7,11 @@ spec:
     engineState: active
     appinfo:
         appns: litmus
-        applabel: app.kubernetes.io/component=operator
+        applabel: app.kubernetes.io/version=latest
         appkind: deployment
     chaosServiceAccount: pod-delete-sa
     experiments:
-        - name: pod-delete
+        - name: pod-delete-chaos-operator-ce
           spec:
             components:
-                env:
-                    - name: TOTAL_CHAOS_DURATION
-                      value: "30"
-                    - name: CHAOS_INTERVAL
-                      value: "10"
-                    - name: FORCE
-                      value: "false"
-                    - name: PODS_AFFECTED_PERC
-                      value: ""
+                env: []

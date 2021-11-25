@@ -7,7 +7,13 @@ spec:
     engineState: ""
     appinfo:
         appns: cert-manager
-        applabel: app.kubernetes.io/component=webhook
+        applabel: app.kubernetes.io/name=webhook
         appkind: deployment
     chaosServiceAccount: ""
-    experiments: []
+    experiments:
+        - name: pod-mem-hog-cert-manager-webhook-cert-manager
+          spec:
+            components:
+                env:
+                    - name: TARGET_CONTAINER
+                      value: cert-manager

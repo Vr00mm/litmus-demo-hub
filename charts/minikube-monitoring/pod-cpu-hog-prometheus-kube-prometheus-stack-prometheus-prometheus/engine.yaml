@@ -7,7 +7,13 @@ spec:
     engineState: ""
     appinfo:
         appns: monitoring
-        applabel: app.kubernetes.io/instance=kube-prometheus-stack-prometheus
+        applabel: operator.prometheus.io/shard=0
         appkind: statefulset
     chaosServiceAccount: ""
-    experiments: []
+    experiments:
+        - name: pod-cpu-hog-prometheus-kube-prometheus-stack-prometheus-prometheus
+          spec:
+            components:
+                env:
+                    - name: TARGET_CONTAINER
+                      value: prometheus

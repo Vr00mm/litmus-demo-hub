@@ -10,4 +10,10 @@ spec:
         applabel: app=subscriber
         appkind: deployment
     chaosServiceAccount: ""
-    experiments: []
+    experiments:
+        - name: pod-mem-hog-subscriber-subscriber
+          spec:
+            components:
+                env:
+                    - name: TARGET_CONTAINER
+                      value: subscriber

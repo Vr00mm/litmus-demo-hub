@@ -7,7 +7,13 @@ spec:
     engineState: ""
     appinfo:
         appns: cert-manager
-        applabel: app.kubernetes.io/name=cainjector
+        applabel: app.kubernetes.io/component=cainjector
         appkind: deployment
     chaosServiceAccount: ""
-    experiments: []
+    experiments:
+        - name: pod-mem-hog-cert-manager-cainjector-cert-manager
+          spec:
+            components:
+                env:
+                    - name: TARGET_CONTAINER
+                      value: cert-manager

@@ -10,4 +10,10 @@ spec:
         applabel: app.kubernetes.io/component=litmus-frontend
         appkind: deployment
     chaosServiceAccount: ""
-    experiments: []
+    experiments:
+        - name: pod-mem-hog-litmusportal-frontend-litmusportal-frontend
+          spec:
+            components:
+                env:
+                    - name: TARGET_CONTAINER
+                      value: litmusportal-frontend

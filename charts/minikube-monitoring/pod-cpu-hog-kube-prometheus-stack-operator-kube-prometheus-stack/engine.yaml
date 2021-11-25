@@ -7,7 +7,13 @@ spec:
     engineState: ""
     appinfo:
         appns: monitoring
-        applabel: app.kubernetes.io/part-of=kube-prometheus-stack
+        applabel: chart=kube-prometheus-stack-20.0.1
         appkind: deployment
     chaosServiceAccount: ""
-    experiments: []
+    experiments:
+        - name: pod-cpu-hog-kube-prometheus-stack-operator-kube-prometheus-stack
+          spec:
+            components:
+                env:
+                    - name: TARGET_CONTAINER
+                      value: kube-prometheus-stack

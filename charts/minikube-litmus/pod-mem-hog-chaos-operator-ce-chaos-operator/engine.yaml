@@ -7,7 +7,13 @@ spec:
     engineState: ""
     appinfo:
         appns: litmus
-        applabel: app.kubernetes.io/component=operator
+        applabel: app.kubernetes.io/version=latest
         appkind: deployment
     chaosServiceAccount: ""
-    experiments: []
+    experiments:
+        - name: pod-mem-hog-chaos-operator-ce-chaos-operator
+          spec:
+            components:
+                env:
+                    - name: TARGET_CONTAINER
+                      value: chaos-operator

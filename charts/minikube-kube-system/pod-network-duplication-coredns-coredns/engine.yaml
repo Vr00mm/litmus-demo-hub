@@ -11,17 +11,9 @@ spec:
         appkind: deployment
     chaosServiceAccount: pod-network-duplication-sa
     experiments:
-        - name: pod-network-duplication
+        - name: pod-network-duplication-coredns-coredns
           spec:
             components:
                 env:
-                    - name: TOTAL_CHAOS_DURATION
-                      value: "60"
-                    - name: NETWORK_PACKET_DUPLICATION_PERCENTAGE
-                      value: "100"
-                    - name: CONTAINER_RUNTIME
-                      value: docker
-                    - name: SOCKET_PATH
-                      value: /var/run/docker.sock
-                    - name: PODS_AFFECTED_PERC
-                      value: ""
+                    - name: TARGET_CONTAINER
+                      value: coredns

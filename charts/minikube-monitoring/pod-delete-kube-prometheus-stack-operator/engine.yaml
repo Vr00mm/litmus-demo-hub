@@ -7,19 +7,11 @@ spec:
     engineState: active
     appinfo:
         appns: monitoring
-        applabel: app.kubernetes.io/part-of=kube-prometheus-stack
+        applabel: chart=kube-prometheus-stack-20.0.1
         appkind: deployment
     chaosServiceAccount: pod-delete-sa
     experiments:
-        - name: pod-delete
+        - name: pod-delete-kube-prometheus-stack-operator
           spec:
             components:
-                env:
-                    - name: TOTAL_CHAOS_DURATION
-                      value: "30"
-                    - name: CHAOS_INTERVAL
-                      value: "10"
-                    - name: FORCE
-                      value: "false"
-                    - name: PODS_AFFECTED_PERC
-                      value: ""
+                env: []

@@ -10,4 +10,10 @@ spec:
         applabel: k8s-app=kube-dns
         appkind: deployment
     chaosServiceAccount: ""
-    experiments: []
+    experiments:
+        - name: pod-mem-hog-coredns-coredns
+          spec:
+            components:
+                env:
+                    - name: TARGET_CONTAINER
+                      value: coredns

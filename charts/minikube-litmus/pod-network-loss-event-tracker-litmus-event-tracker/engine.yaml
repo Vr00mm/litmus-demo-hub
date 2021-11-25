@@ -11,17 +11,9 @@ spec:
         appkind: deployment
     chaosServiceAccount: pod-network-loss-sa
     experiments:
-        - name: pod-network-loss
+        - name: pod-network-loss-event-tracker-litmus-event-tracker
           spec:
             components:
                 env:
-                    - name: TOTAL_CHAOS_DURATION
-                      value: "60"
-                    - name: NETWORK_PACKET_LOSS_PERCENTAGE
-                      value: "100"
-                    - name: CONTAINER_RUNTIME
-                      value: docker
-                    - name: SOCKET_PATH
-                      value: /var/run/docker.sock
-                    - name: PODS_AFFECTED_PERC
-                      value: ""
+                    - name: TARGET_CONTAINER
+                      value: litmus-event-tracker

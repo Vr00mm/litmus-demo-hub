@@ -7,21 +7,13 @@ spec:
     engineState: active
     appinfo:
         appns: monitoring
-        applabel: app.kubernetes.io/instance=kube-prometheus-stack-prometheus
+        applabel: operator.prometheus.io/shard=0
         appkind: statefulset
     chaosServiceAccount: pod-network-latency-sa
     experiments:
-        - name: pod-network-latency
+        - name: pod-network-latency-prometheus-kube-prometheus-stack-prometheus-prometheus
           spec:
             components:
                 env:
-                    - name: TOTAL_CHAOS_DURATION
-                      value: "60"
-                    - name: NETWORK_LATENCY
-                      value: "2000"
-                    - name: CONTAINER_RUNTIME
-                      value: docker
-                    - name: SOCKET_PATH
-                      value: /var/run/docker.sock
-                    - name: PODS_AFFECTED_PERC
-                      value: ""
+                    - name: TARGET_CONTAINER
+                      value: prometheus

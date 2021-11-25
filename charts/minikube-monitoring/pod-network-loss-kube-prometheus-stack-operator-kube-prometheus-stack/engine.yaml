@@ -7,21 +7,13 @@ spec:
     engineState: active
     appinfo:
         appns: monitoring
-        applabel: app.kubernetes.io/part-of=kube-prometheus-stack
+        applabel: chart=kube-prometheus-stack-20.0.1
         appkind: deployment
     chaosServiceAccount: pod-network-loss-sa
     experiments:
-        - name: pod-network-loss
+        - name: pod-network-loss-kube-prometheus-stack-operator-kube-prometheus-stack
           spec:
             components:
                 env:
-                    - name: TOTAL_CHAOS_DURATION
-                      value: "60"
-                    - name: NETWORK_PACKET_LOSS_PERCENTAGE
-                      value: "100"
-                    - name: CONTAINER_RUNTIME
-                      value: docker
-                    - name: SOCKET_PATH
-                      value: /var/run/docker.sock
-                    - name: PODS_AFFECTED_PERC
-                      value: ""
+                    - name: TARGET_CONTAINER
+                      value: kube-prometheus-stack

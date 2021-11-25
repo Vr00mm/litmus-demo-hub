@@ -10,4 +10,10 @@ spec:
         applabel: app=event-tracker
         appkind: deployment
     chaosServiceAccount: ""
-    experiments: []
+    experiments:
+        - name: pod-cpu-hog-event-tracker-litmus-event-tracker
+          spec:
+            components:
+                env:
+                    - name: TARGET_CONTAINER
+                      value: litmus-event-tracker

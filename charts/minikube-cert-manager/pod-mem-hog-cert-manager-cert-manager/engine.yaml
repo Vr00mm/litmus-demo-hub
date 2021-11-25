@@ -10,4 +10,10 @@ spec:
         applabel: app.kubernetes.io/name=cert-manager
         appkind: deployment
     chaosServiceAccount: ""
-    experiments: []
+    experiments:
+        - name: pod-mem-hog-cert-manager-cert-manager
+          spec:
+            components:
+                env:
+                    - name: TARGET_CONTAINER
+                      value: cert-manager

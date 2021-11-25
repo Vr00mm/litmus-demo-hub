@@ -10,4 +10,10 @@ spec:
         applabel: app.kubernetes.io/component=podtato-head-right-arm
         appkind: deployment
     chaosServiceAccount: ""
-    experiments: []
+    experiments:
+        - name: pod-mem-hog-podtato-right-arm-podtato-head-right-arm
+          spec:
+            components:
+                env:
+                    - name: TARGET_CONTAINER
+                      value: podtato-head-right-arm

@@ -11,15 +11,9 @@ spec:
         appkind: deployment
     chaosServiceAccount: pod-io-stress-sa
     experiments:
-        - name: pod-io-stress
+        - name: pod-io-stress-podtato-right-leg-podtato-head-right-leg
           spec:
             components:
                 env:
-                    - name: TOTAL_CHAOS_DURATION
-                      value: "120"
-                    - name: FILESYSTEM_UTILIZATION_PERCENTAGE
-                      value: "10"
-                    - name: CONTAINER_RUNTIME
-                      value: docker
-                    - name: SOCKET_PATH
-                      value: /var/run/docker.sock
+                    - name: TARGET_CONTAINER
+                      value: podtato-head-right-leg
