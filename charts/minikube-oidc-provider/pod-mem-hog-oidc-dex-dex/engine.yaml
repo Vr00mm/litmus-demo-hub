@@ -1,15 +1,15 @@
-apiVersion: ""
-kind: ""
+apiVersion: litmuschaos.io/v1alpha1
+kind: ChaosEngine
 metadata:
-    name: ""
-    namespace: ""
+    name: nginx-chaos
+    namespace: default
 spec:
-    engineState: ""
+    engineState: active
     appinfo:
         appns: oidc-provider
-        applabel: app.kubernetes.io/name=dex
+        applabel: app.kubernetes.io/instance=oidc-dex
         appkind: deployment
-    chaosServiceAccount: ""
+    chaosServiceAccount: pod-memory-hog-exec-sa
     experiments:
         - name: pod-mem-hog-oidc-dex-dex
           spec:

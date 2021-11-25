@@ -7,7 +7,7 @@ spec:
     engineState: active
     appinfo:
         appns: litmus
-        applabel: app=mongo
+        applabel: app.kubernetes.io/component=litmus-database
         appkind: statefulset
     chaosServiceAccount: pod-delete-sa
     experiments:

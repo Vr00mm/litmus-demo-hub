@@ -7,7 +7,7 @@ spec:
     engineState: active
     appinfo:
         appns: monitoring
-        applabel: app.kubernetes.io/part-of=kube-prometheus-stack
+        applabel: app.kubernetes.io/version=20.0.1
         appkind: deployment
     chaosServiceAccount: pod-network-corruption-sa
     experiments:

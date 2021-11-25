@@ -7,7 +7,7 @@ spec:
     engineState: active
     appinfo:
         appns: cert-manager
-        applabel: app.kubernetes.io/component=cainjector
+        applabel: app=cainjector
         appkind: deployment
     chaosServiceAccount: pod-network-corruption-sa
     experiments:

@@ -7,7 +7,7 @@ spec:
     engineState: active
     appinfo:
         appns: monitoring
-        applabel: alertmanager=kube-prometheus-stack-alertmanager
+        applabel: app.kubernetes.io/name=alertmanager
         appkind: statefulset
     chaosServiceAccount: pod-delete-sa
     experiments:

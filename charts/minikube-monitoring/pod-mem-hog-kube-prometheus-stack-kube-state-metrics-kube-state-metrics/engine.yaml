@@ -1,15 +1,15 @@
-apiVersion: ""
-kind: ""
+apiVersion: litmuschaos.io/v1alpha1
+kind: ChaosEngine
 metadata:
-    name: ""
-    namespace: ""
+    name: nginx-chaos
+    namespace: default
 spec:
-    engineState: ""
+    engineState: active
     appinfo:
         appns: monitoring
         applabel: app.kubernetes.io/name=kube-state-metrics
         appkind: deployment
-    chaosServiceAccount: ""
+    chaosServiceAccount: pod-memory-hog-exec-sa
     experiments:
         - name: pod-mem-hog-kube-prometheus-stack-kube-state-metrics-kube-state-metrics
           spec:

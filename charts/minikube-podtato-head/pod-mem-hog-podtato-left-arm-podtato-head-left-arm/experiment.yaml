@@ -1,23 +1,141 @@
-apiVersion: ""
-kind: ""
+apiVersion: litmuschaos.io/v1alpha1
+kind: ChaosExperiment
 metadata:
     name: pod-mem-hog-podtato-left-arm-podtato-head-left-arm
     labels:
-        name: ""
-        app.kubernetes.io/part-of: ""
-        app.kubernetes.io/component: ""
-        app.kubernetes.io/version: ""
+        name: pod-memory-hog-exec
+        app.kubernetes.io/part-of: litmus
+        app.kubernetes.io/component: chaosexperiment
+        app.kubernetes.io/version: latest
 spec:
     definition:
-        scope: ""
-        permissions: []
-        image: ""
-        imagePullPolicy: ""
-        args: []
-        command: []
-        env: []
+        scope: Namespaced
+        permissions:
+            - apiGroups:
+                - ""
+              resources:
+                - pods
+              verbs:
+                - create
+                - delete
+                - get
+                - list
+                - patch
+                - update
+                - deletecollection
+            - apiGroups:
+                - ""
+              resources:
+                - events
+              verbs:
+                - create
+                - get
+                - list
+                - patch
+                - update
+            - apiGroups:
+                - ""
+              resources:
+                - configmaps
+              verbs:
+                - get
+                - list
+            - apiGroups:
+                - ""
+              resources:
+                - pods/log
+              verbs:
+                - get
+                - list
+                - watch
+            - apiGroups:
+                - ""
+              resources:
+                - pods/exec
+              verbs:
+                - get
+                - list
+                - create
+            - apiGroups:
+                - apps
+              resources:
+                - deployments
+                - statefulsets
+                - replicasets
+                - daemonsets
+              verbs:
+                - list
+                - get
+            - apiGroups:
+                - apps.openshift.io
+              resources:
+                - deploymentconfigs
+              verbs:
+                - list
+                - get
+            - apiGroups:
+                - ""
+              resources:
+                - replicationcontrollers
+              verbs:
+                - get
+                - list
+            - apiGroups:
+                - argoproj.io
+              resources:
+                - rollouts
+              verbs:
+                - list
+                - get
+            - apiGroups:
+                - batch
+              resources:
+                - jobs
+              verbs:
+                - create
+                - list
+                - get
+                - delete
+                - deletecollection
+            - apiGroups:
+                - litmuschaos.io
+              resources:
+                - chaosengines
+                - chaosexperiments
+                - chaosresults
+              verbs:
+                - create
+                - list
+                - get
+                - patch
+                - update
+                - delete
+        image: litmuschaos/go-runner:ci
+        imagePullPolicy: Always
+        args:
+            - -c
+            - ./experiments -name pod-memory-hog-exec
+        command:
+            - /bin/bash
+        env:
+            - name: TOTAL_CHAOS_DURATION
+              value: "60"
+            - name: MEMORY_CONSUMPTION
+              value: "500"
+            - name: PODS_AFFECTED_PERC
+              value: ""
+            - name: RAMP_TIME
+              value: ""
+            - name: LIB
+              value: litmus
+            - name: CHAOS_KILL_COMMAND
+              value: kill $(find /proc -name exe -lname '*/dd' 2>&1 | grep -v 'Permission denied' | awk -F/ '{print $(NF-1)}' | head -n 1)
+            - name: SEQUENCE
+              value: parallel
+            - name: TARGET_PODS
+              value: ""
         labels:
-            name: ""
-            app.kubernetes.io/part-of: ""
-            app.kubernetes.io/component: ""
-            app.kubernetes.io/version: ""
+            name: pod-memory-hog-exec
+            app.kubernetes.io/part-of: litmus
+            app.kubernetes.io/component: experiment-job
+            app.kubernetes.io/version: latest

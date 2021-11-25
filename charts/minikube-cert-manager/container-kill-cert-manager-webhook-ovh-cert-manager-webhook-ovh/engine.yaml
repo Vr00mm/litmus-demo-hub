@@ -7,7 +7,7 @@ spec:
     engineState: active
     appinfo:
         appns: cert-manager
-        applabel: release=cert-manager-webhook-ovh
+        applabel: app=cert-manager-webhook-ovh
         appkind: deployment
     chaosServiceAccount: container-kill-sa
     experiments:

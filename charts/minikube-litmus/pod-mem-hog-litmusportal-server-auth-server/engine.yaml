@@ -1,15 +1,15 @@
-apiVersion: ""
-kind: ""
+apiVersion: litmuschaos.io/v1alpha1
+kind: ChaosEngine
 metadata:
-    name: ""
-    namespace: ""
+    name: nginx-chaos
+    namespace: default
 spec:
-    engineState: ""
+    engineState: active
     appinfo:
         appns: litmus
         applabel: app.kubernetes.io/component=litmus-server
         appkind: deployment
-    chaosServiceAccount: ""
+    chaosServiceAccount: pod-memory-hog-exec-sa
     experiments:
         - name: pod-mem-hog-litmusportal-server-auth-server
           spec:

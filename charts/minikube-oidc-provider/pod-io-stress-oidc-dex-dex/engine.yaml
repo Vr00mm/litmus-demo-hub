@@ -7,7 +7,7 @@ spec:
     engineState: active
     appinfo:
         appns: oidc-provider
-        applabel: app.kubernetes.io/name=dex
+        applabel: app.kubernetes.io/instance=oidc-dex
         appkind: deployment
     chaosServiceAccount: pod-io-stress-sa
     experiments:

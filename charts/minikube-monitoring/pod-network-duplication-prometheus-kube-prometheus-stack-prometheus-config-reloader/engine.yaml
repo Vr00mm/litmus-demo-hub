@@ -7,7 +7,7 @@ spec:
     engineState: active
     appinfo:
         appns: monitoring
-        applabel: app.kubernetes.io/name=prometheus
+        applabel: operator.prometheus.io/name=kube-prometheus-stack-prometheus
         appkind: statefulset
     chaosServiceAccount: pod-network-duplication-sa
     experiments:

@@ -7,7 +7,7 @@ spec:
     engineState: active
     appinfo:
         appns: cert-manager
-        applabel: app.kubernetes.io/name=webhook
+        applabel: app=webhook
         appkind: deployment
     chaosServiceAccount: pod-network-loss-sa
     experiments:
