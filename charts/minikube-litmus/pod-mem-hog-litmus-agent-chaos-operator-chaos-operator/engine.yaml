@@ -1,0 +1,19 @@
+apiVersion: litmuschaos.io/v1alpha1
+kind: ChaosEngine
+metadata:
+    name: nginx-chaos
+    namespace: default
+spec:
+    engineState: active
+    appinfo:
+        appns: litmus
+        applabel: app.kubernetes.io/name=chaos-operator
+        appkind: deployment
+    chaosServiceAccount: pod-memory-hog-exec-sa
+    experiments:
+        - name: pod-mem-hog-litmus-agent-chaos-operator-chaos-operator
+          spec:
+            components:
+                env:
+                    - name: TARGET_CONTAINER
+                      value: chaos-operator

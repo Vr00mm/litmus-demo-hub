@@ -7,7 +7,7 @@ spec:
     engineState: active
     appinfo:
         appns: monitoring
-        applabel: app.kubernetes.io/version=20.0.1
+        applabel: app.kubernetes.io/part-of=kube-prometheus-stack
         appkind: deployment
     chaosServiceAccount: pod-cpu-hog-exec-sa
     experiments:

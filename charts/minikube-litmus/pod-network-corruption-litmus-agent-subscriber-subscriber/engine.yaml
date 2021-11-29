@@ -1,0 +1,19 @@
+apiVersion: litmuschaos.io/v1alpha1
+kind: ChaosEngine
+metadata:
+    name: nginx-network-chaos
+    namespace: default
+spec:
+    engineState: active
+    appinfo:
+        appns: litmus
+        applabel: app.kubernetes.io/name=subscriber
+        appkind: deployment
+    chaosServiceAccount: pod-network-corruption-sa
+    experiments:
+        - name: pod-network-corruption-litmus-agent-subscriber-subscriber
+          spec:
+            components:
+                env:
+                    - name: TARGET_CONTAINER
+                      value: subscriber

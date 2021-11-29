@@ -1,0 +1,19 @@
+apiVersion: litmuschaos.io/v1alpha1
+kind: ChaosEngine
+metadata:
+    name: nginx-chaos
+    namespace: default
+spec:
+    engineState: active
+    appinfo:
+        appns: chartmuseum
+        applabel: app.kubernetes.io/instance=chartmuseum
+        appkind: deployment
+    chaosServiceAccount: container-kill-sa
+    experiments:
+        - name: container-kill-chartmuseum-chartmuseum
+          spec:
+            components:
+                env:
+                    - name: TARGET_CONTAINER
+                      value: chartmuseum

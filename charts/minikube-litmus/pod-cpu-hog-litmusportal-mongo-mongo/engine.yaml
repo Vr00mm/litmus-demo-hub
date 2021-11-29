@@ -7,7 +7,7 @@ spec:
     engineState: active
     appinfo:
         appns: litmus
-        applabel: app.kubernetes.io/component=litmus-database
+        applabel: app=mongo
         appkind: statefulset
     chaosServiceAccount: pod-cpu-hog-exec-sa
     experiments:

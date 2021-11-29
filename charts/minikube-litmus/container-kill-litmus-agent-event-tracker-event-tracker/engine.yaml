@@ -1,0 +1,19 @@
+apiVersion: litmuschaos.io/v1alpha1
+kind: ChaosEngine
+metadata:
+    name: nginx-chaos
+    namespace: default
+spec:
+    engineState: active
+    appinfo:
+        appns: litmus
+        applabel: app.kubernetes.io/name=event-tracker
+        appkind: deployment
+    chaosServiceAccount: container-kill-sa
+    experiments:
+        - name: container-kill-litmus-agent-event-tracker-event-tracker
+          spec:
+            components:
+                env:
+                    - name: TARGET_CONTAINER
+                      value: event-tracker

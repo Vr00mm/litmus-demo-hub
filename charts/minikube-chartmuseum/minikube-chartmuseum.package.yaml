@@ -1,0 +1,29 @@
+packageName: minikube-chartmuseum
+experiments:
+    - name: container-kill-chartmuseum-chartmuseum
+      CSV: container-kill-chartmuseum-chartmuseum.chartserviceversion.yaml
+      desc: container-kill-chartmuseum-chartmuseum
+    - name: pod-delete-chartmuseum
+      CSV: pod-delete-chartmuseum.chartserviceversion.yaml
+      desc: pod-delete-chartmuseum
+    - name: pod-cpu-hog-chartmuseum-chartmuseum
+      CSV: pod-cpu-hog-chartmuseum-chartmuseum.chartserviceversion.yaml
+      desc: pod-cpu-hog-chartmuseum-chartmuseum
+    - name: pod-mem-hog-chartmuseum-chartmuseum
+      CSV: pod-mem-hog-chartmuseum-chartmuseum.chartserviceversion.yaml
+      desc: pod-mem-hog-chartmuseum-chartmuseum
+    - name: pod-io-stress-chartmuseum-chartmuseum
+      CSV: pod-io-stress-chartmuseum-chartmuseum.chartserviceversion.yaml
+      desc: pod-io-stress-chartmuseum-chartmuseum
+    - name: pod-network-corruption-chartmuseum-chartmuseum
+      CSV: pod-network-corruption-chartmuseum-chartmuseum.chartserviceversion.yaml
+      desc: pod-network-corruption-chartmuseum-chartmuseum
+    - name: pod-network-duplication-chartmuseum-chartmuseum
+      CSV: pod-network-duplication-chartmuseum-chartmuseum.chartserviceversion.yaml
+      desc: pod-network-duplication-chartmuseum-chartmuseum
+    - name: pod-network-loss-chartmuseum-chartmuseum
+      CSV: pod-network-loss-chartmuseum-chartmuseum.chartserviceversion.yaml
+      desc: pod-network-loss-chartmuseum-chartmuseum
+    - name: pod-network-latency-chartmuseum-chartmuseum
+      CSV: pod-network-latency-chartmuseum-chartmuseum.chartserviceversion.yaml
+      desc: pod-network-latency-chartmuseum-chartmuseum

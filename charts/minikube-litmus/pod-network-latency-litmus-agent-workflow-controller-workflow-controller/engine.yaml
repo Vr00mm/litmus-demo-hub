@@ -1,0 +1,19 @@
+apiVersion: litmuschaos.io/v1alpha1
+kind: ChaosEngine
+metadata:
+    name: nginx-network-chaos
+    namespace: default
+spec:
+    engineState: active
+    appinfo:
+        appns: litmus
+        applabel: app.kubernetes.io/name=workflow-controller
+        appkind: deployment
+    chaosServiceAccount: pod-network-latency-sa
+    experiments:
+        - name: pod-network-latency-litmus-agent-workflow-controller-workflow-controller
+          spec:
+            components:
+                env:
+                    - name: TARGET_CONTAINER
+                      value: workflow-controller

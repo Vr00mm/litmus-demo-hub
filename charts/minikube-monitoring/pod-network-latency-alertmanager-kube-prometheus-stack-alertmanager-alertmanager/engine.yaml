@@ -7,7 +7,7 @@ spec:
     engineState: active
     appinfo:
         appns: monitoring
-        applabel: app.kubernetes.io/name=alertmanager
+        applabel: app.kubernetes.io/version=0.22.2
         appkind: statefulset
     chaosServiceAccount: pod-network-latency-sa
     experiments:

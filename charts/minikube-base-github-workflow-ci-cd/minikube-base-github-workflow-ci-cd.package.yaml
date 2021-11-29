@@ -1,0 +1,29 @@
+packageName: minikube-base-github-workflow-ci-cd
+experiments:
+    - name: container-kill-base-github-workflow-ci-cd-base-github-workflow-ci-cd
+      CSV: container-kill-base-github-workflow-ci-cd-base-github-workflow-ci-cd.chartserviceversion.yaml
+      desc: container-kill-base-github-workflow-ci-cd-base-github-workflow-ci-cd
+    - name: pod-delete-base-github-workflow-ci-cd
+      CSV: pod-delete-base-github-workflow-ci-cd.chartserviceversion.yaml
+      desc: pod-delete-base-github-workflow-ci-cd
+    - name: pod-cpu-hog-base-github-workflow-ci-cd-base-github-workflow-ci-cd
+      CSV: pod-cpu-hog-base-github-workflow-ci-cd-base-github-workflow-ci-cd.chartserviceversion.yaml
+      desc: pod-cpu-hog-base-github-workflow-ci-cd-base-github-workflow-ci-cd
+    - name: pod-mem-hog-base-github-workflow-ci-cd-base-github-workflow-ci-cd
+      CSV: pod-mem-hog-base-github-workflow-ci-cd-base-github-workflow-ci-cd.chartserviceversion.yaml
+      desc: pod-mem-hog-base-github-workflow-ci-cd-base-github-workflow-ci-cd
+    - name: pod-io-stress-base-github-workflow-ci-cd-base-github-workflow-ci-cd
+      CSV: pod-io-stress-base-github-workflow-ci-cd-base-github-workflow-ci-cd.chartserviceversion.yaml
+      desc: pod-io-stress-base-github-workflow-ci-cd-base-github-workflow-ci-cd
+    - name: pod-network-corruption-base-github-workflow-ci-cd-base-github-workflow-ci-cd
+      CSV: pod-network-corruption-base-github-workflow-ci-cd-base-github-workflow-ci-cd.chartserviceversion.yaml
+      desc: pod-network-corruption-base-github-workflow-ci-cd-base-github-workflow-ci-cd
+    - name: pod-network-duplication-base-github-workflow-ci-cd-base-github-workflow-ci-cd
+      CSV: pod-network-duplication-base-github-workflow-ci-cd-base-github-workflow-ci-cd.chartserviceversion.yaml
+      desc: pod-network-duplication-base-github-workflow-ci-cd-base-github-workflow-ci-cd
+    - name: pod-network-loss-base-github-workflow-ci-cd-base-github-workflow-ci-cd
+      CSV: pod-network-loss-base-github-workflow-ci-cd-base-github-workflow-ci-cd.chartserviceversion.yaml
+      desc: pod-network-loss-base-github-workflow-ci-cd-base-github-workflow-ci-cd
+    - name: pod-network-latency-base-github-workflow-ci-cd-base-github-workflow-ci-cd
+      CSV: pod-network-latency-base-github-workflow-ci-cd-base-github-workflow-ci-cd.chartserviceversion.yaml
+      desc: pod-network-latency-base-github-workflow-ci-cd-base-github-workflow-ci-cd

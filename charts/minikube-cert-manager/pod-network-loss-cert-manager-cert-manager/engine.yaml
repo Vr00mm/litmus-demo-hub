@@ -7,7 +7,7 @@ spec:
     engineState: active
     appinfo:
         appns: cert-manager
-        applabel: app.kubernetes.io/name=cert-manager
+        applabel: app=cert-manager
         appkind: deployment
     chaosServiceAccount: pod-network-loss-sa
     experiments:
